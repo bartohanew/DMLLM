@@ -1,17 +1,17 @@
 from common import *
 
-with open('how_to_dm.txt', 'r') as file:
-    how_to_dm = file.read()
+with open('characteristics_wizard.txt', 'r') as file:
+    characteristics_wizard = file.read()
 
 sys_message = f"""
-{how_to_dm}
+{characteristics_wizard}
 
-You are to decide whether a roll is needed for the proposed action.
+You are to answer questions about the personality of a wizard based on the information found in the characteristics_wizard.txt file
 """
 
 M = [
     {"role": "system", "content": sys_message}, 
-    {"role": "user", "content": "I want to attack the guard."}, # player says
+    {"role": "user", "content": "what are my flaws?"}, # player says
 ]
 
 r1 = get_response(M)
