@@ -11,8 +11,7 @@ You are to decide whether a roll is needed for the proposed action.
 
 M = [
     {"role": "system", "content": sys_message}, 
-    {"role": "assistant", "content": "I want to attack the guard."}, # computer says
-    {"role": "user", "content": "I am a fighter named Grog. I am looking for a quest"}, # player says
+    {"role": "user", "content": "I want to attack the guard."}, # player says
 ]
 
 r1 = get_response(M)
