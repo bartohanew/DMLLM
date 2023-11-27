@@ -1,0 +1,10 @@
+Proficiency Bonus = 2+(.25*(level-1)) rounded down
+
+Str
+Dex
+Con
+Int
+Wis*
+Cha*
+
+* - add proficiency bonus

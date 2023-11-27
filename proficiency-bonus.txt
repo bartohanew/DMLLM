@@ -1,0 +1,1 @@
+Proficiency Bonus = 2+(.25*(level-1)) rounded down

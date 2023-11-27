@@ -1,0 +1,8 @@
+Strength (STR) = 10
+Dexterity (DEX) = 15
+Constituion (CON) = 14
+Intelligence (INT) = 16
+Wisdom (WIS) = 12
+Charisma (CHA) = 8
+
+Ability Score Modifier = (Ability Score-10)/2 rounded down

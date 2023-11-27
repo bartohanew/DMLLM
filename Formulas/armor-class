@@ -1,0 +1,4 @@
+unarmored = 10 + Dex
+leather armor = 11 + Dex
+chain mail = 16
+shield = +2
