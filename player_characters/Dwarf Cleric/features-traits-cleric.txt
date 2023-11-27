@@ -1,0 +1,36 @@
+Spellcasting Ability. Wisdom is your 
+spellcasting ability for your spells. The saving 
+throw DC to resist a spell you cast is 13. Your 
+attack bonus when you make an attack with
+a spell is +5. See the rulebook for rules on
+casting your spells.
+
+Disciple of Life. Your healing spells are 
+particularly effective. Whenever you restore
+hit points to a creature with a spell of 1st level 
+or higher, the creature regains additional hit 
+points equal to 2 + the spell’s level.
+Darkvision. You see in dim light within a 
+60-foot radius of you as if it were bright light, 
+and in darkness in that radius as if it were dim
+light. You can’t discern color in darkness, only
+shades of gray.
+
+Dwarven Resilience. You have advantage on 
+saving throws against poison, and you have 
+resistance against poison damage.
+
+Dwarven Toughness. Your hit point maximum 
+increases by 1, and it increases by 1 every time 
+you gain a level (included).
+
+Mercenary Sergeant. You were a minor officer
+among the Mintarn mercenaries, a position 
+that still gets you some perks. Even though
+you’re not on active duty, Mintarn soldiers 
+recognize your authority and influence, and
+they defer to you if they are of a lower rank. You
+can requisition simple equipment and horses 
+for temporary use. You can also gain access 
+to Mintarn mercenary encampments and 
+fortresses

@@ -1,0 +1,5 @@
+d = hit dice size
+l = level
+c = con Modifier
+
+hp = ((d+ld+2l+2lc-2)/2)

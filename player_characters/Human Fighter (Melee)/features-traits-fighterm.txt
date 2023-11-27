@@ -1,0 +1,22 @@
+Second Wind. You have a limited well of 
+stamina you can draw on to protect 
+yourself from harm. You can use a bonus 
+action to regain hit points equal to 1d10 + your 
+fighter level.
+Once you use this feature, you must finish a
+short or long rest before you can use it again.
+
+Fighting Style (Defense). While you are 
+wearing armor, you gain a +1 bonus to AC. This 
+bonus is already included in your AC.
+
+Position of Privilege. Thanks to your noble
+birth, people are inclined to think the best
+of you. You are welcome in high society, 
+and people assume you have the right to be 
+wherever you are. The common folk make
+every effort to accommodate you and avoid
+your displeasure, and other people of high 
+birth treat you as a member of the same social 
+sphere. You can secure an audience with a local 
+noble if you need to

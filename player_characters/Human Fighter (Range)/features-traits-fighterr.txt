@@ -1,0 +1,21 @@
+Second Wind. You have a limited well of 
+stamina you can draw on to protect 
+yourself from harm. You can use a bonus 
+action to regain hit points equal to 1d10 + your 
+fighter level.
+Once you use this feature, you must finish a
+short or long rest before you can use it again.
+
+Fighting Style (Archery). You gain a +2 bonus 
+to attack rolls you make with ranged weapons.
+This bonus is already included in your attack
+with your longbow.
+
+Rustic Hospitality. Since you come from the 
+ranks of the common folk, you fit in among
+them with ease. You can find a place to hide,
+rest, or recuperate among other commoners, 
+unless you have shown yourself to be a danger 
+to them. They shield you from the law or 
+anyone else searching for you, though they are 
+unwilling to risk their lives for you.

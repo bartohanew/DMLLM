@@ -1,0 +1,22 @@
+Proficiency Bonus = 2+(.25*(level-1)) rounded down
+
+Acrobatics (Dex) = 
+Animal Handling (Wis) = 
+Arcana (Int) = 
+*Athletics (Str) =
+Deception (Cha) =
+*History (Int) =
+Insight (Wis) =
+Intimidation (Cha) =
+Investigation (Int) =
+Medicine (Wis) =
+Nature (Int) =
+*Perception (Wis) =
+Performance (Cha) =
+*Persuasion (Cha) =
+Religion (Int) =
+Sleight of Hand (Dex) =
+Stealth (Dex) =
+Survival (Wis) =
+
+* - add proficiency bonus
