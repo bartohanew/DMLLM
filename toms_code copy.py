@@ -27,8 +27,11 @@ You are to interpret the actions this wizard would take and answer quetions base
 
 M = [
     {"role": "system", "content": sys_message}, 
-    {"role": "user", "content": "i want to start my adventure"}, # player says
 ]
 
-r1 = get_response(M)
-print(r1)
+while True:
+    m = input(">")
+    M.append({"role": "user", "content": m})
+    r1 = get_response(M)
+    print(r1)
+    M.append({"role": "assistant", "content": r1})

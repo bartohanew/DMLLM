@@ -1,0 +1,3 @@
+A characters proficiency bonus is calculated using the following equation:
+
+Proficiency Bonus = 2+(.25*(level-1)) rounded down
