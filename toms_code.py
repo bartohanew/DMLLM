@@ -12,9 +12,6 @@ with open('story/adventure_hook.txt', 'r') as file:
 with open('story/backstory.txt', 'r') as file:
     backstory = file.read()
 
-with open('story/forgotten_realms.txt', 'r') as file:
-    forgotten_realms = file.read()
-
 with open('story/overview.txt', 'r') as file:
     overview = file.read()
 
@@ -23,7 +20,6 @@ sys_message = f"""
 {how_to_dm}
 {backstory}
 {adventure_hook}
-{forgotten_realms}
 {overview}
 
 You are to interpret the actions this wizard would take and answer quetions based on the information provided

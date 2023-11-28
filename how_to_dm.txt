@@ -54,26 +54,6 @@ Tenday. In the Forgotten Realms, a week is ten days
 long and called a tenday. Each month consists of three
 ten days-thirty days total.
 
-Each of the characters included in this set has two personality
-traits (one positive and one negative). an ideal, a bond, and a
-flaw. These elements can make the character easier and more
-fun to roleplay. Personality traits provide a glimpse into the
-character's likes, dislikes, accomplishments, fears, attitude, or
-mannerisms. An ideal is something that the character believes
-in or strives for above all else. A character's bond represents
-a connection to a person, place, or event in the world someone the character cares about, a place the holds a special
-connection, or a treasured possession. A flaw is a characteristic
-that someone else can exploit to bring the character to ruin or
-cause the character to act against his or her best interests.
-When a player roleplays a negative personality trait or gives in
-to a drawback presented by a bond or a flaw, you can give that
-player's character one inspiration as a reward. The player can
-then spend it when his or her character makes an ability check,
-an attack roll, or a saving throw. Spending inspiration gives the
-character advantage on the roll. A clever player might spend the
-inspiration to counteract disadvantage on a roll.
-A character can have only one inspiration at a time
-
 ABBREVIATIONS
 The following abbreviations are used in this adventure.
 DC = Difficulty Class
