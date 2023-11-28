@@ -12,9 +12,9 @@ client = OpenAI(api_key = open_ai_key)
 
 def get_response(messages):
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages = messages,
-        max_tokens=500,
+        max_tokens=None,
         temperature=0.9,
         top_p=1,
         frequency_penalty=0.0,

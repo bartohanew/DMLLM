@@ -12,15 +12,15 @@ with open('story/adventure_hook.txt', 'r') as file:
 with open('story/backstory.txt', 'r') as file:
     backstory = file.read()
 
-with open('story/overview.txt', 'r') as file:
-    overview = file.read()
+with open('story/part_1.txt', 'r') as file:
+    part_1 = file.read()
 
 sys_message = f"""
 {characteristics_wizard}
 {how_to_dm}
 {backstory}
 {adventure_hook}
-{overview}
+{part_1}
 
 You are to interpret the actions this wizard would take and answer quetions based on the information provided
 """

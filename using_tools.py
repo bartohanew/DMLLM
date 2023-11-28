@@ -2,8 +2,6 @@ from common import *
 
 client = OpenAI()
 
-from langchain import hub
-
 # just for some illustration... it's nice
 if False:
     prompt = hub.pull("hwchase17/react-json")
@@ -171,5 +169,6 @@ def use_assistant(query):
 
   print_messages_from_thread(thread.id)
 
-use_assistant("I'm bound and gagged, and I want to cast fireball.")
-use_assistant("I use my eyebrows to try and convince the guard to remove my restraints.")
+use_assistant("I want to cast fireball.")
+
+# i can cast spells and make ability checks
