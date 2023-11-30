@@ -1,0 +1,10 @@
+Ability Scores:
+
+Strength = 10
+Dexterity = 15
+Constitution = 14
+Intelligence = 16
+Wisdom = 12
+Charisma = 8
+
+Ability Score Modifier = (Ability Score-10)/2 rounded down
