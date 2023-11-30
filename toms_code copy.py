@@ -46,5 +46,6 @@ while True:
     m = input(">")
     M.append({"role": "user", "content": m})
     r1 = get_response(M)
+    print("\n\n\n")
     print(r1)
     M.append({"role": "assistant", "content": r1})
