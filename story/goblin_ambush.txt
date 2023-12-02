@@ -1,0 +1,24 @@
+Respond with the following text to start the encounter:
+
+You've been on the Triboar Trail for about half a day. As you
+come around a bend, you spot two dead horses sprawled
+about fifty feet ahead of you, blocking the path. Each has
+several black-feathered arrows sticking out of it. The woods
+press close to the trail here, with a steep embankment and
+dense thickets on either side.
+If you are using the "Meet Me in Phandalin" adventure
+hook, then any character who approaches to make a
+closer investigation can identify the horses as belonging
+to Gundren Rockseeker and Sildar Hallwinter. They've
+been dead about a day, and it's clear that arrows killed the
+horses. 
+
+When the characters inspect the scene closer, read
+the following:
+
+The saddlebags have been looted. Nearby lies an empty
+leather map case.
+
+Four goblins are hiding in the woods, two on each side of
+the road. They wait until someone approaches the bodies
+and then attack

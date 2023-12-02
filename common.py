@@ -5,16 +5,16 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-open_ai_key = os.getenv("OPENAI_API_KEY")
+open_ai_key = os.getenv("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")
 
 # set API KEY
 client = OpenAI(api_key = open_ai_key)
 
 def get_response(messages):
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4-1106-preview",
         messages = messages,
-        max_tokens=500,
+        max_tokens=None,
         temperature=0.9,
         top_p=1,
         frequency_penalty=0.0,
