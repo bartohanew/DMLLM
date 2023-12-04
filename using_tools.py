@@ -2,11 +2,6 @@ from common import *
 
 client = OpenAI()
 
-# just for some illustration... it's nice
-if False:
-    prompt = hub.pull("hwchase17/react-json")
-    print(prompt[0].prompt.template)
-
 type_modifiers = {
     'strength': 2,
     'dexterity': 1,
