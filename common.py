@@ -10,9 +10,9 @@ open_ai_key = os.getenv("OPEN_AI_KEY")
 # set API KEY
 client = OpenAI(api_key = open_ai_key)
 
-def get_response(messages):
+def get_response(messages, model="gpt-4-1106-preview"):
     response = client.chat.completions.create(
-        model="gpt-4-1106-preview",
+        model=model,
         messages = messages,
         max_tokens=None,
         temperature=0.9,
