@@ -9,3 +9,4 @@ add: a waterskin
 add: 50 feet of hempen rope
 add: a grappling hook
 add: a well-loved lute
+remove: 1 torch

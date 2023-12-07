@@ -227,3 +227,113 @@ Seconds stretch into a tense minute, and then two. The forest still seems eerily
 Roll for initiative!
 DM (to themselves):
 Changed scene to combat with goblins
+DM (to themselves):
+The previous scene has been truncated, and now we are 3 days in the future.
+DM (to themselves):
+Changed scene to approach cave
+DM (to themselves):
+Skipped ahead to approaching the goblin hideout. The battle was difficult, and afterwards we were able to track the goblins back to their hideout.
+DM:
+(summarizing from last time...) Oliver's fireball spell incinerated the tree and alerted nearby goblins, leading to a combat encounter; three days post-battle, your party is now stealthily approaching the goblin hideout to confront the remaining threat.
+Player:
+What do we see around us?
+DM (to themselves):
+Changed scene to approach cave
+DM (to themselves):
+(thinking...) Consider describing the landscape using sensory details to set the mood—mention rocky terrain, gnarled trees, or the sound of dripping water from within the cave. Offer hints of recent goblin activity like discarded loot or tracks, and remind players to be on their guards for possible lookouts or traps.
+DM:
+As you edge closer to the mouth of the cave from which the stream flows, the murmuring water echoes against the rocky outcrops, providing a constant, soothing background noise that belies the potential danger ahead. The air is tinged with the earthy smell of wet stone and moss, as well as the faint, rank scent of goblin—a mixture of sweat, dirt, and poorly cured leather.
+
+The terrain around you is uneven and strewn with boulders and patches of brambles, making your advance slower and more laborious. You notice signs of frequent passage in the dirt, with numerous small, humanoid footprints intermixed with the tracks of wolves—presumably the goblins' hunting companions or pets.
+
+Ahead, the sizeable cave entrance looms, dark and foreboding, as the stream trickles out from its gaping maw. The thickets around the clearing rustle softly with the occasional breeze, offering limited visibility and providing hiding places that could conceal lurking enemies.
+
+To either side of the stream are flattened areas within the briars, clearly artificial in nature. The wooden planks laid out across the ground suggest a lookout or blind where guards might lie hidden, watching for intruders. As you scan the surroundings, you spot a glint of metal and the shift of small, furtive figures: a pair of goblins, armed and seemingly inattentive, stationed at these guard posts.
+
+Remember, if you wish to avoid detection and possibly gain the element of surprise, moving carefully and quietly will be key. Those of you who choose to scout ahead, make sure to make a Dexterity (Stealth) check to see if you can approach undetected by the goblins' passive Wisdom (Perception). Proceed with caution.
+Player:
+We set up camp here
+DM (to themselves):
+(thinking...) Consider the risks of camping near the goblin hideout. Advise them on stealth and setting up watches for a potential ambush. Also, remind them to take care of any light or noise that could give away their position, and perhaps suggest they use this time to plan their approach or gather information about the goblin patrols and defenses.
+DM:
+As you decide to set up camp near the goblin hideout, you understand the need for utmost discretion. You find a spot that's out of direct line of sight from the guards’ outpost and offers some natural concealment, perhaps in a small depression or behind a large outcropping of rocks. You go about setting up your camp with as little noise as possible.
+
+Here are a few precautions and actions you might consider to maintain stealth:
+
+1. **No Fires**: Forgoing a campfire will prevent light from giving away your position. It may mean a cold night and uncooked meals, but it's essential to stay hidden.
+   
+2. **Silent Watches**: Set up a watch rotation to keep an eye on the goblins and guard against being surprised in your sleep. Ensure everyone knows they need to be as quiet as possible while on watch.
+
+3. **Camouflage**: Use surrounding natural materials like branches, leaves, or mud to disguise tents or sleeping areas further.
+   
+4. **Dim Light**: If you must use light, keep it dim and shielded so it doesn't escape to alert the goblins.
+   
+5. **Noise Discipline**: Keep chatter to a whisper and avoid unnecessary movement that could rustle foliage or clink gear.
+   
+6. **Planning**: Use this time to observe the goblin's behaviors and guards' shifts, if visible. Plan your approach to the cave based on these observations.
+
+7. **Scouting**: If someone has the ability to do so safely, a close reconnaissance under the cover of darkness could yield valuable information about the guard rotations and cave entrance defenses.
+
+You have the rest of the day and night ahead of you. Let me know how you prepare your camp, what precautions you are taking, and if anyone is doing anything specific during this downtime.
+Player:
+We set up camp, keeping these precautions in mind. I take first watch, as the group falls to sleep for the night.
+DM (to themselves):
+(thinking...) You find a concealed vantage point that offers a clear view of the cave entrance and the surrounding area while keeping you hidden. You stay vigilant, keeping your eyes and ears open for any signs of movement or sounds that could indicate a threat approaching. The weight of responsibility rests on you to alert your companions at the first sign of danger, ensuring their safety while they rest. During this quiet time, you also take the opportunity to reflect on the upcoming challenges and consider any strategies that might give you an advantage in dealing with the goblin hideout.
+DM:
+You settle into your watch position, keeping the camp covered in shadows and natural camouflage as your companions' breathing evens out into the rhythm of sleep. The night is cool and quiet, the only sounds being the gentle gurgle of the stream and the occasional rustle of wildlife in the underbrush.
+
+Eyes sharp, you monitor the cave entrance and the two goblin lookouts. They seem entirely unaware of your presence, their attention wavering between casual vigilance and boredom-induced inattentiveness. Hours pass, and the moon arcs across the star-filled sky, casting silver light that dances off the water's surface.
+
+Every so often, you scan the perimeter of your small encampment, ensuring no curious creatures or errant goblins stumble upon your resting group. You take the time to think through potential plans for when morning comes; considering ambush tactics, escape routes, and even what to do if everything goes sideways.
+
+As dawn begins to hint at the horizon, your companions stir, and it's time to wake them gently and discuss the plan of action. Please make a Perception check to determine the final outcome of your watch and if any details were noticed during the night.
+DM:
+(summarizing from last time...) As the party's designated lookout, you've been attentively watching for danger while your companions slept, contemplating strategies for the anticipated goblin hideout encounter, and as dawn approaches, you must roll a Perception check to conclude your watch and reveal any significant observations made during the night.
+Player:
+Can you roll for me?
+DM (to themselves):
+Rolled 1d20 (kind=perception) 10 + 0 = 10
+DM (to themselves):
+(thinking...) With a roll of 10, the lookout's watch seems to have been relatively uneventful, but it's an average result—there may have been subtle signs or movements missed. Consider providing them with some helpful but not crucial information they observed, like goblin shift changes or animal activity, foreshadowing future encounters.
+DM:
+As the soft hues of dawn begin to paint the sky, you take one last vigilant sweep of the surroundings. With a roll of 10 on your Perception check—sufficient but not exceptional—you have not noticed any immediate threats or suspicious activity that would cause alarm. However, you did observe that the goblin lookouts seem to change shifts at regular intervals, suggesting a level of organization within their ranks that could mean a structured defense inside the hideout. Apart from that, no peculiar occurrences or creatures have approached your camp during the night.
+
+You decide it's time to gently rouse your companions, briefing them on the goblin lookout patterns before discussing and finalizing your plan of action for the day ahead. Your watch has ended without incident, and with the knowledge gained, you feel a bit more prepared for what might lie inside the goblin stronghold.
+Player:
+We sneak up to the river, using the sounds as a guard for our footsteps, in the early dawn light. With our understanding of their rounds, we aim for a moment when they are distracted
+DM (to themselves):
+(thinking...) Encourage the party to make Stealth checks as they approach the river, using the sound of the water to mask their movements. Since they have knowledge of the goblin shift changes, you might consider creating a window of opportunity where the goblins are at their least attentive, perhaps during a shift change or when one seems particularly distracted. This could provide the players with a chance to gain the element of surprise or avoid an encounter altogether.
+DM:
+You cautiously approach the riverbank, using the natural cover of the environment and timing your movements with the ambient noise of the rushing water. The early dawn light provides enough visibility to avoid any missteps while still offering the cloak of twilight to conceal your passage.
+
+As you draw closer, you start to discern the distinct guttural tone of goblin voices. They seem preoccupied, with one goblin nudging the other, pointing towards the horizon, likely commenting on the break of day.
+
+Now is your chance. Everyone, please roll a Stealth check to determine how quietly and inconspicuously you can maneuver into position while the goblins' backs are turned and their attention is elsewhere.
+Player:
+OK, roll stealth check please.
+DM (to themselves):
+Rolled 1d20 (kind=stealth) 15 + 0 = 15
+DM (to themselves):
+(thinking...) With a roll of 15, the party seems to be moving quite stealthily, capitalizing on the goblins' distraction. This suggests a good chance at reaching an advantageous position unobserved, possibly setting up an ambush or bypassing them altogether. Consider narrating their advance as they use the environment to hide their approach and prepare themselves for what they decide to do next.
+DM:
+The soft sounds of your careful footsteps are easily masked by the gentle rush of the river as you glide like shadows among the trees and underbrush. With a roll of 15 for your group's Stealth check, your covert advance toward the distracted goblins is a silent endeavor, ensuring that no unwanted attention falls upon you.
+
+You manage to position yourselves strategically, using the goblins' momentary lapse in vigilance to your advantage. You find yourselves within striking distance, should you choose to ambush, or alternatively well-placed to continue past them undetected if you prefer to avoid confrontation.
+
+Please let me know how you would like to proceed. Do you wish to launch a surprise attack on the lookouts, thereby potentially securing the cave entrance, or would you rather bypass them entirely, taking the risk of leaving enemies behind you but maintaining the element of surprise for whatever lies ahead?
+Player:
+Yes, I want to calm the wolves
+DM (to themselves):
+Rolled 1d20 (kind=Animal Handling) 15 + 0 = 15
+DM (to themselves):
+(thinking...) With a roll of 15 on the Animal Handling check, the player has a good chance of pacifying the wolves without causing a commotion. Describe how they carefully approach the wolves, using soothing tones and deliberate movements to convey their peaceful intentions—potentially allowing the party to either bypass the beasts or even turn them into reluctant allies within the cave. Keep in mind potential repercussions or developments depending on how this interaction unfolds.
+DM:
+You approach the wolves with measured steps, your hands outstretched in a calming gesture, projecting an aura of peace. Speaking in soothing tones, you assure the snarling creatures of your benign intentions. The wolves, still tense, focus on you with narrowed eyes, their growls subsiding ever so slightly as they try to discern your motive.
+
+With a roll of 15 on your Wisdom (Animal Handling) check, the air around you seems to settle, and the wolves' rigid postures relax incrementally. They begin to show signs of submission—ears pulling back and tails lowering cautiously. 
+
+The chains rattle less violently now, and one wolf, braver than the others, steps forward hesitantly, sniffing the air around you. You remain perfectly still, allowing it to familiarize itself with your scent.
+
+The wolves, though not entirely won over, seem to accept your presence for the moment and no longer present an immediate threat. They allow you to move throughout the room, granting you passage without hostility. 
+
+You can now choose to continue exploring the cave, perhaps ascending the fissure to area 8 or proceeding further into the kennel chamber, all while exercising care to ensure the wolves remain placid. What will you do next?
