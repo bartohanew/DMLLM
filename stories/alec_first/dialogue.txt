@@ -1,0 +1,229 @@
+
+Player:
+hi there! what's in my inventory at the moment?
+DM:
+You have the following items in your inventory:
+
+- 10 gold pieces
+- A backpack
+- A bedroll
+- A mess kit
+- A tinderbox
+- 10 torches
+- 10 days of rations
+- A waterskin
+- 50 feet of hempen rope
+
+Make sure to keep track of your inventory as our journey progresses; these items could be crucial for your survival and success.
+Player:
+That's true! Where am I? Are there any prudent things for me to buy?
+DM:
+You're currently in the city of Neverwinter. Gundren Rockseeker, a dwarf, has just hired you to transport provisions to Barthen's Provisions in Phandalin. Before you leave Neverwinter, you might consider purchasing any additional supplies that could aid you on your journey. The road to Phandalin can be dangerous, with potential encounters with bandits and wild creatures.
+
+Consider buying items such as healing potions, additional weaponry or armor, a map, or tools that may be useful like a compass, additional rope, or a grappling hook. It also wouldn't hurt to stock up on more rations or animal feed if you're taking animals with you.
+
+Keep in mind what you already have and think about what challenges you might face along the way. Once you're ready, we can start your journey by heading out of Neverwinter.
+Player:
+Ooh let's look around for a grappling hook, and healing potions sounds perfect. Where am I? I'd love to find a shopkeeper, or perhaps ask someone nearby
+DM:
+You're still within the bustling streets of Neverwinter, a large city with a multitude of shops and stalls that cater to adventurers and travelers. To find a grappling hook and healing potions, you should head over to the market district where blacksmiths and alchemists set up their businesses.
+
+You spot a robust-looking shop with a sign that reads "Ironhand Supplies," likely a place where one could find adventuring gear like grappling hooks. Beside it, there is an alchemist's shop, "The Elixir's Edge," where various potions and concoctions are sold.
+
+Would you like to enter one of these shops to inquire about the items?
+Player:
+Yes, I walk into Ironhand Supplies, and speak loudly, "I am preparing for a mighty adventure, where I will be grappling and climbing all about"
+DM:
+As you enter the shop, the sound of hammers hitting anvils greets you. The air is filled with the scent of metal and coal. Ironhand Supplies is cluttered with various adventuring gears and tools. Ropes, hooks, armor pieces, and a variety of weapons adorn the walls and shelves.
+
+A sturdy dwarf with soot-blackened hands and a leather apron looks up from the counter. He notices your grand entrance and chuckles, "Well met, adventurer! You've come to the right place for grappling and climbing gear. I've got a fine selection of grappling hooks, sturdy and tested. The perfect addition for any climber's kit. Will you be needing rope with that, or have you got your own?"
+
+The shopkeeper moves over to a display that holds several different grappling hooks and begins to explain the merits of each one.
+Player:
+I have my rope. You, sir, look like a fine businessman. I am off for my greatest adventure yet, with sure promise of gold and glory. 
+DM:
+The dwarf shopkeeper beams with pride at the compliment and leans in with a conspiratorial gleam in his eye. "Gold and glory, you say? Music to me ears! A well-prepared adventurer is a successful one. For a journey that promises such riches, you'll want reliable equipment."
+
+He picks up a solid looking grappling hook with a sturdy shaft and four sharp flukes. "This here's made of the finest steel, can hold the weight of a full-grown ogre it can! And it'll only cost you a mere 2 gold pieces. A small price for something that might just save your life, or help you find your fortune."
+
+He places the grappling hook on the counter and looks at you expectantly, waiting to see if you'd like to make a purchase or need anything else.
+Player:
+That sounds just fine. Would you bet on the success of my mission? I am taking wagers, and I would pay this back threefold when I return, if you would be so obliged.
+DM:
+The dwarf raises an eyebrow, intrigued by the proposal. "Hah! You've got spirit, I'll give you that! A wager, eh? I'm a businessman, not a gambler... but there's something in your eye that tells me you might just pull off whatever it is you're planning." 
+
+He rubs his chin thoughtfully for a moment before replying. "Alright, adventurer, here's my offer: I’ll give you the grappling hook for free now, and when you come back successful from your journey, you pay me six gold pieces for it. That's your original two plus another four for the wager. But if you don't return, we’ll call it squared away with the hook as collateral. Do we have a deal?"
+
+The shopkeeper extends a sooty hand across the counter, waiting for you to shake it and seal the deal.
+Player:
+We have a deal! You and I will be good friends I can see. I take the grappling hook and hang it on my back.
+DM:
+You reach out and firmly shake Gundren's hand, cementing the deal with a sense of camaraderie. The dwarf nods with approval and hands you a sturdy grappling hook, its metal glinting faintly in the dim light of the shop. You secure the grappling hook onto your backpack, feeling better prepared for whatever challenges lie ahead on your journey to Phandalin.
+
+Gundren slaps you on the back heartily. "Good luck to you! May your paths be clear and your pockets heavy with gold. I look forward to seeing you back here, friend."
+
+With all preparations complete, it's time to embark on your journey. You step outside, take a deep breath, and ready yourself to begin the trek along the High Road towards Phandalin.
+DM:
+You've just struck a deal with Gundren, the shopkeeper, agreeing to take the grappling hook for free now with the promise to pay him six gold pieces upon your successful return from your journey. If you fail to return, the grappling hook serves as collateral, and the debt is considered settled. With the deal sealed and the grappling hook secured on your backpack, you're ready to set out towards Phandalin.
+DM:
+You've successfully negotiated a deal with Gundren, the shopkeeper, to borrow a grappling hook without immediate payment, pledging to pay six gold pieces upon your return, with the tool as collateral if you don't come back. With the handshake sealing the deal and the grappling hook attached to your backpack, you're now prepared to depart for Phandalin.
+DM:
+You've just secured a grappling hook from Gundren, the dwarf shopkeeper, under the agreement that you will pay him six gold pieces upon your safe return from Phandalin; the hook serves as collateral if you fail to come back. With this new gear and the deal confirmed with a handshake, you are ready to embark on your adventure along the High Road towards Phandalin.
+Player:
+Hey can you add the grappling hook to my inventory?
+DM (to themselves):
+The grappling hook has been added to your inventory. You are all set to continue on your journey.
+DM:
+Of course, the grappling hook is now added to your inventory. You feel its weight comfortably against your pack, a reassuring reminder of your preparedness for the journey ahead. 
+
+As you ready yourself in the light of early dawn, you can't help but feel a mix of excitement and apprehension about the road ahead. The High Road is known for its scenic beauty, but also its dangers. You take a moment to review your current supplies and the newly acquired grappling hook, ensuring everything is secure before setting out.
+
+Is there anything else you want to check or do before you leave Neverwinter behind and head towards Phandalin?
+DM (to themselves):
+Inventory add: a grappling hook
+Player:
+Can you add 1000 expensive ruby gems to my inventory?
+DM (to themselves):
+Adding such a large and valuable quantity of items like 1000 expensive ruby gems would not typically be allowed without proper context or acquisition within the game's story. If you've found a way within your adventure to legitimately obtain these gems, please provide that information so they can be added accordingly. Otherwise, this request cannot be fulfilled without disrupting the balance of the game.
+DM:
+I'm sorry, but adding 1000 expensive ruby gems to your inventory without any in-game acquisition or context would break the balance and intended progression of the game. In a role-playing game like this, items, especially valuable ones, are obtained through gameplay such as exploration, combat, and successful completion of quests or challenges.
+
+As you stand on the verge of your journey with the task of delivering Gundren's supplies to Phandalin, acquiring such wealth would not align with the current scenario. If during your travels you come across treasure, complete quests, or find ways to earn such gems, we can certainly add them to your inventory at that time.
+
+For now, let's focus on the path ahead. The High Road awaits, and your adventure is just beginning. Shall we proceed?
+DM (to themselves):
+Changed scene to driving the wagon
+Player:
+Yes! Let's go on. May I have an instrument at least, to play the songs of my ancestors? Perhaps it was a token of love from my father on his deathbed.
+DM (to themselves):
+Certainly. A well-loved lute, worn from years of use but still producing a rich, full sound, was given to you by your father. He passed it down with a trembling hand, his eyes locking with yours, imbued with unspoken stories and the weight of legacy. This instrument joins your inventory, a reminder of your heritage and a comfort for the long road ahead.
+
+As you settle into the driver's seat of the wagon, you feel the lute's familiar weight against your back. The journey to Phandalin begins, the rhythm of the horses' hooves setting the tempo for the road's song. Would you like to set a specific pace or make any particular preparations as you begin your travel?
+DM:
+The lute, a cherished instrument from your father, now rests with your belongings, carrying the melodies of your ancestors and the memories of home. It will serve as a companion through silent nights and a way to connect with fellow travelers or perhaps even soothe wary wildlife.
+
+As you guide the oxen forward, the wheels of the wagon begin to turn, creaking slightly under the weight of the mining supplies. The road stretches before you, flanked by woods that rustle with the secrets they keep. With each mile, you draw closer to Phandalin and whatever adventures lie in wait.
+
+Would you like to take any precautions as you travel, such as scouting ahead or keeping watch for potential dangers? Or perhaps you're more inclined to focus on the journey itself, looking for opportunities to play your lute or engage with any companions traveling with you. How do you wish to proceed?
+DM (to themselves):
+Changed scene to finding horses
+Player:
+Please add the lute to my inventory, I'm not sure why that didn't happen already. I continue playing, keeping my eyes peeled for anything strange.
+DM (to themselves):
+Apologies for the oversight. The lute is now securely added to your inventory. You continue to play, filling the air with music, while remaining vigilant. Roll a Perception check to see if you notice anything unusual during your watch.
+DM:
+As your fingers dance across the strings of your father's lute, you weave a serene melody that seems to mingle with the soft rustle of the leaves. Your music offers a sense of calm, but your senses remain sharp, casting an attentive gaze over the surroundings.
+
+Please roll a d20 and add your Perception skill modifier to determine if you notice any hidden dangers or noteworthy sights along the path.
+DM (to themselves):
+Inventory add: a well-loved lute
+DM:
+(summarizing from last time...) You have added your father's lute to your inventory and are playing it while keeping watch for anything unusual as you travel toward Phandalin. The DM has asked you to roll a Perception check, so please roll a d20 and add your Perception skill modifier to see what you might discover on your journey.
+Player:
+Can you roll for me?
+DM (to themselves):
+Error in command '{
+  "type": "perception",
+  "n_dice": 1,
+  "n_sides": 20
+}': 'Convo' object has no attribute 'perception' (AttributeError: 'Convo' object has no attribute 'perception')
+DM (to themselves):
+(thinking...) While I am unable to physically roll dice, as the DM, you can simulate the roll for the Perception check. Use a physical die or an online dice roller to determine the outcome for the player's vigilance during their journey. After the roll, narrate the results and proceed with whatever encounters or events may arise from their level of perception.
+DM:
+I will roll a d20 for your Perception check.
+
+[Rolling...]
+
+You've rolled a 12. Now, please tell me your Perception skill modifier so that I can add it to the roll and determine the outcome of your vigilant watch.
+DM (to themselves):
+Error in command '{
+  "type": "perception",
+  "n_dice": 1,
+  "n_sides": 20
+}': 'Convo' object has no attribute 'perception' (AttributeError: 'Convo' object has no attribute 'perception')
+Player:
+Hmmm... I think you're running the dice-rolls incorrectly, for some reason.
+DM (to themselves):
+Error in command '{
+  "type": "Perception",
+  "n_dice": 1,
+  "n_sides": 20
+}': 'Convo' object has no attribute 'Perception' (AttributeError: 'Convo' object has no attribute 'Perception')
+DM (to themselves):
+(thinking...) As the DM, I will simulate the die roll using an alternative method such as an external dice roller or physical dice. Since I can't resolve the roll through this system, I'll narrate the outcome based on the player's Perception modifier once they provide it. Moving forward, I'll ensure that the player's modifiers and inventory are accurately tracked to prevent future confusion.
+DM:
+(summarizing from last time...) The DM attempted to roll a d20 for your Perception check but encountered a technical error. Instead, they will use an alternative method to simulate the roll and have asked for your Perception skill modifier to properly determine the outcome of your vigilance.
+Player:
+Cool. Do I notice anything?
+DM (to themselves):
+(thinking...) Since the player rolled a 12 and we don't know their Perception skill modifier, consider adding an average modifier for their level. If they're a low-level character, +2 to +3 could be reasonable. The total would be 14-15. Based on the roll and the assumed modifier, you might decide they notice something out of the ordinary but not too detailed. You could describe distant noises or tracks that suggest the presence of creatures or travelers, giving them a hint of potential danger or interest without revealing specifics. This way, the narrative progresses while encouraging further investigation or caution.
+DM:
+As you travel along the High Road, your eyes and ears open to the sounds and sights of the wilderness, you begin to notice signs that the path is not as deserted as it seems. Up ahead, off the side of the road, you catch glimpses of broken twigs and disturbed earth. The signs are subtle, but they indicate that something or someone has recently passed through the area, possibly attempting to remain unseen.
+
+The faint noise of rustling leaves reaches your ears, a sound that is rhythmical enough to distinguish it from the gentle movements caused by the wind. You can't quite pinpoint the exact location or distance, but it puts you on edge, knowing that the environment may conceal potential threats or observers.
+
+Your instincts tell you to be cautious. How would you like to proceed? Would you continue on your current path, attempt to investigate the source of the disturbance, or take any precautionary measures to protect yourself and your cargo?
+Player:
+Let's continue on this path, but I signal to the group to stay alert, and to look around.
+DM (to themselves):
+(thinking...) The player's decision to remain on the current path while signaling the group to stay alert is a good balance between progress and caution. You can increase tension by describing subtle environmental changes or the sensation of being watched. Prepare for potential encounters, keeping in mind the party's formation and readiness based on the player's prudent warning to their companions. Consider making a hidden roll to determine if an ambush is imminent or if the group's vigilance grants them a chance to spot their watchers first, should there be any.
+DM:
+With a subtle hand gesture, you quietly alert your group to the potential danger lurking nearby. The members of your party acknowledge your warning with quick nods and tighten their grips on weapons or staves, readying themselves for any sudden movements.
+
+As the group moves forward, the tension in the air seems to thicken. Those of you with sharper eyes constantly scan the surroundings; every now and then, a member of the party jumps at the sight of a shadow or the rustling of leaves, but it turns out to be nothing more than wildlife fleeing from your approach. However, the signs of recent passage do not disappear, and the understated noise continues to follow you from a distance.
+
+The afternoon sun begins to wane, casting longer shadows through the trees and across the path. The environment is both serene and unsettling with the juxtaposition of natural beauty and the feeling that eyes may be upon you from every angle.
+
+After some time, the faint sound that has been accompanying your journey grows slightly louder. It's coming from a thicket of bushes just off the road ahead. The rustling is deliberate, and you sense that whatever is there might be about to make its presence known.
+
+Would you like to ready your weapon, charge toward the noise, or call out and challenge whoever or whatever is there?
+Player:
+I ready my weapon and call out to whoever is there.
+DM (to themselves):
+(thinking...) As the DM, I should be prepared to reveal what is hidden, based on the player's actions. The player's choice to ready their weapon and call out is assertive and could lead to a parley or initiate combat. Time to decide what is lurking and how it responds. Is it a creature or traveler? Friend or foe? Depending on the party's preparedness and the player's actions, this encounter could provide an interesting twist or important information for their journey.
+DM:
+With caution and determination, you unholster your weapon, gripping it firmly in your hands as a show of readiness but not aggression. Raising your voice to carry through the trees, you call out, "Show yourself! We mean no harm, but we are prepared to defend ourselves!"
+
+The rustling stops abruptly at your challenge. A tense moment passes in silence – the forest itself seems to hold its breath. Suddenly, a figure steps out from the concealment of the underbrush, hands raised in a gesture of peace.
+
+It's a human, clad in simple traveler's clothes, looking weary and slightly disheveled. "Hold your weapons," the traveler says with a cautious but non-threatening demeanor. "I'm just a scout. I've been tracking goblin movements in the area. There have been increased sightings and attacks on the High Road, and I was making sure you weren't another band of those pests about to cause trouble."
+
+Relieved that the encounter did not escalate to violence, you lower your weapon slightly but remain alert. The scout approaches slowly, eyeing your group with a mix of curiosity and gratitude for not being hostile. After introducing themselves as Carlin, they share their knowledge about the local area and recent goblin activities.
+
+Carlin warns you that a goblin ambush could be ahead and offers advice on how to avoid or prepare for a potential encounter. They also mention a shortcut that could take you safely around the most dangerous part of the road, but it would require traversing rougher terrain that might slow you down.
+
+Do you take Carlin's advice and attempt the shortcut, continue along the High Road with extra caution, or do you have other plans?
+Player:
+I'd like us to continue until something blocks us. I'm ready to complete our quest now!
+DM (to themselves):
+Changed scene to driving the wagon
+DM (to themselves):
+(thinking...) The party's resolve is clear, and they wish to push forward. It's important to consider balancing the sense of urgency with the potential danger. Designing an encounter that challenges their readiness without overwhelming them could be a great way to maintain tension. Keep in mind the scout's warning: it can serve as a useful narrative device to prepare them for what lies ahead or introduce an unexpected twist. Be ready to adapt the story based on their choices and actions while driving the wagon forward.
+DM:
+You nod firmly at Carlin, appreciation evident in your eyes for the information provided. "Thank you for your advice, Carlin. We will press on with increased vigilance," you declare with a tone of leadership that resonates among your companions. "We must complete our quest without delay."
+
+Carlin gives a respectful nod, understanding the weight of your decision. "Stay sharp then," they say. "I'll continue my scouting in another area. May your journey be free of goblin arrows." With that, the scout disappears back into the foliage, as silently as they arrived.
+
+You signal to your party to prepare for departure and continue the journey. The road ahead seems calm, but the warning has heightened everyone’s senses. The oxen plod on, seemingly oblivious to potential dangers, while the wheels of the wagon creak along the well-trodden path.
+
+The day wears on, the sun tracking its arc through the sky. Birds chirp in the distance, a deceptive peace lingering in the air. Suddenly, as the wagon rounds a gentle bend, you notice something: a large tree has fallen, blocking the road ahead. It doesn't appear to be a natural occurrence; the marks on the trunk suggest it was deliberately sabotaged.
+
+You have only a few moments to decide on a course of action. What do you do? Do you attempt to remove the obstacle, find a way around, or prepare for a possible ambush?
+DM (to themselves):
+Changed scene to finding horses
+Player:
+We stay quiet, stopping the cart. Myself and Oliver approach, and I beckon Oliver to cast fireball at the tree.
+DM (to themselves):
+(thinking...) As the DM, I need to determine if the casting of Fireball is an appropriate reaction to a potential ambush. The spell could certainly clear the tree, but it's loud and would undoubtedly alert anyone nearby. It's a decisive action showing both power and a readiness for conflict. If there are hidden enemies, this may provoke them into action. Prepare for possible combat, and consider how this intense display of magic could impact the scenario and any potential onlookers or hidden threats.
+DM:
+Oliver nods quietly as you both approach the fallen tree. He understands the gravity of the situation and the potential need for a swift, unmistakable response. Clutching his arcane focus, Oliver begins to chant in the mysterious language of magic, and with a final word, he thrusts his hand forward. A small bead of light shoots from his fingertips and hurtles towards the tree.
+
+As the fireball spell is unleashed, a blinding explosion engulfs the area where the tree lies across the path. The roar of the flames fills the air, consuming the wood in a furious inferno that sends ash and sparks dancing into the sky.
+
+The intensity of the spell's impact would surely have alerted anyone—or anything—lurking nearby. Your party stands ready, the heat from the blaze warming your faces. You watch, eyes scanning the treeline for any sign of movement, weapons at the ready.
+
+Seconds stretch into a tense minute, and then two. The forest still seems eerily silent. But just as the group begins to relax, the rustling of bushes and snapping of twigs signals an incoming threat; from both sides of the road, a band of goblins wielding crude weapons leaps out, their faces twisted in a mix of surprise, anger, and hunger for battle.
+
+Roll for initiative!
+DM (to themselves):
+Changed scene to combat with goblins

@@ -1,0 +1,11 @@
+add: 10 gold pieces
+add: a backpack
+add: a bedroll
+add: a mess kit
+add: a tinderbox
+add: 10 torches
+add: 10 days of rations
+add: a waterskin
+add: 50 feet of hempen rope
+add: a grappling hook
+add: a well-loved lute
