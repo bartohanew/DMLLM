@@ -14,13 +14,6 @@ Flaws: I’ll do just about anything to uncover
 historical secrets that would add to 
 my research.
 
-Wizard
-Wizards are supreme magic-users. Drawing on the subtle weave of 
-magic that permeates the cosmos, they cast spells of explosive fire, 
-arcing lightning, subtle deception, and brute-force mind control. The 
-mightiest wizards learn to conjure elementals from other planes of 
-existence, glimpse the future, or turn slain foes into zombies.
-
 Background
 You have spent your life dedicated to Oghma, all-seeing god of 
 knowledge, and spent years learning the lore of the multiverse.
@@ -36,8 +29,4 @@ complete this quest. In the meantime, your visions suggest that Sister
 Garaele—a priest of Tymora, the goddess of luck—can aid you in the 
 town of Phandalin.
 
-Alignment: Chaotic Good. The pursuit and acquisition of 
-knowledge is for the benefit of all. Kingdoms and laws are useful so far 
-as they allow knowledge to flourish. Tyrants who seek to suppress and 
-control it are the worst villains. You share your knowledge freely, and 
-use what you have learned to help where you can
+Alignment: Chaotic Good

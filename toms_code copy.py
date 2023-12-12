@@ -19,10 +19,6 @@ with open('characteristics_wizard.txt', 'r') as file:
 with open('story/goblin_ambush.txt', 'r') as file:
     goblin_ambush = file.read()
 
-if False:
-    with open('story/journal_tom.txt', 'r') as file:
-        journal = file.read()
-
 sys_message = f"""
 {how_to_dm}
 {backstory}
