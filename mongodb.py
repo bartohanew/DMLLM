@@ -16,26 +16,26 @@ storyline = [
         'name': "sandbox",
         'description': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far.",
         'next_steps': {
-            'introduce characters': "A good first step",
+            'create character': "A good first step",
             'determine marching order': "Optional",
             'driving the wagon': "When the journey really begins. Make sure they know some of the plot before beginning."
         }
     },
     {
         'name': "start",
-        'description': "In Neverwinter, Gundren Rockseeker, a dwarf, hires you to transport provisions to Phandalin. Gundren, with a secretive demeanor, speaks of a significant discovery he and his brothers made. He promises ten gold pieces for safe delivery to Barthen's Provisions in Phandalin. Accompanied by Sildar Haliwinter, he leaves ahead on horseback. Your journey begins on the High Road from Neverwinter, moving southeast. Danger lurks on this path, known for bandits and outlaws.",
+        'description': "Your journey begins on the High Road from Neverwinter, moving southeast. Gundren Rockseeker, a dwarf, hired you in Neverwinter to transport provisions to Phandalin. Gundren, with a secretive demeanor, speaks of a significant discovery he and his brothers made. He promises ten gold pieces for safe delivery to Barthen's Provisions in Phandalin. Accompanied by Sildar Haliwinter, he leaves ahead on horseback. Danger lurks on this path, known for bandits and outlaws.",
         'next_steps': {
-            'introduce characters': "A good first step",
+            'create character': "A good first step",
             'determine marching order': "Optional",
             'driving the wagon': "When the journey really begins. Make sure they know some of the plot before beginning.",
-            'sandbox': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
+            'sandbox': "At any stage, the player/character may veer away from the plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
         }
     },
     {
-        'name': "introduce characters",
-        'description': "Players take turns introducing their characters. They describe their appearance, background, and how they came to know Gundren Rockseeker. Encourage creativity in their backstories, like childhood friendships or past rescues by Gundren.",
+        'name': "create character",
+        'description': "The player creates their character. They pick a race first and then a class. If they don't know what their options are, you are to provide brief, succinct descriptions of each race, then class. They may describe their appearance, background, and how they came to know Gundren Rockseeker. Encourage creativity in their backstories, like childhood friendships or past rescues by Gundren.",
         'next_steps': {
-            'determine marching order': "At any time.",
+            'determine marching order': "Once they're done creating their character, they must determine marching order.",
             'sandbox': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
         }
     },
@@ -57,17 +57,18 @@ storyline = [
     },
     {
         'name': "finding horses",
-        'description': "As the party nears Phandalin, they encounter two dead horses blocking the path, riddled with black-feathered arrows.",
+        'description': "As the party nears Phandalin, they encounter two dead horses blocking the path, riddled with black-feathered arrows. Unbeknownst to the party, four goblins are hiding in the nearby foliage, waiting for them to approach the horses. When they choose to investigate, before anything else happens, they are ambushed by the four goblins immediately.",
         'next_steps': {
-            'combat with goblins': "Investigating the horses triggers the ambush from the goblins hiding in the thicket.",
+            'combat with goblins': "Approaching and investigating the horses triggers the ambush from four goblins hiding in the thicket.",
             'sandbox': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
         },
     },
     {
         'name': "combat with goblins",
-        'description': "The party must quickly react to the goblin attack. Goblins, skilled in stealth and ambush tactics, launch their assault. The players must use their wits and combat skills to overcome this threat.",
+        'description': "The party must quickly react to the goblin attack. Four goblins, skilled in stealth and ambush tactics, launch their assault. The players must use their wits and combat skills to overcome this threat.",
         'next_steps': {
-            'follow goblin trail': "If the party decides to track the goblins, they find a trail leading to the Cragmaw hideout.",'sandbox': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
+            'follow goblin trail': "If the party decides to track the goblins, they find a trail leading to the Cragmaw hideout.",
+            'sandbox': "At any stage, the player/character veers away from any plot points. It is okay for them to create their own adventure this way. Play along. Be fun, engaging, but adhere to the rules and lore of the world. Try your best to get them back to the main story line if they begin to stray too far."
 
         }
     },
@@ -320,16 +321,156 @@ storyline = [
 
 client.lost_mines.story.count_documents({})
 
-client.lost_mines.NPCs.insert_one({
+client.lost_mines.NPCs.insert_many([
+    {
     "name": "Elmar Barthen",
     "relevance": "Owns a trading post; owes money to the party if you are using the 'Meet Me in  Phandalin' adventure hook",
     "personality traits": "",
     "ideals": "",
     "bonds": "",
     "flaws": "",
-})
+    },
+    {
+    "name": "Toblin Stonehill",
+    "relevance": "innkeeper",   
+    }
+])
+
+client.lost_mines.characters.insert_many([
+   {
+  "characterName": "",
+  "class": "Fighter",
+  "level": 1,
+  "race": "Human",
+  "background": "Noble",
+  "alignment": "Lawful Neutral",
+  "playerName": "",
+  "experiencePoints": 0,
+  "attributes": {
+    "strength": {"score": 16, "modifier": "+3"},
+    "dexterity": {"score": 9, "modifier": "-1"},
+    "constitution": {"score": 15, "modifier": "+2"},
+    "intelligence": {"score": 11, "modifier": "+0"},
+    "wisdom": {"score": 13, "modifier": "+1"},
+    "charisma": {"score": 14, "modifier": "+2"}
+  },
+  "proficiencyBonus": "+2",
+  "savingThrows": {
+    "strength": {"value": "+5", "proficient": True},
+    "dexterity": {"value": "-1", "proficient": False},
+    "constitution": {"value": "+4", "proficient": True},
+    "intelligence": {"value": "+0", "proficient": False},
+    "wisdom": {"value": "+1", "proficient": False},
+    "charisma": {"value": "+2", "proficient": False}
+  },
+  "skills": {
+    "acrobatics": {"value": "-1", "proficient": False},
+    "animalHandling": {"value": "+1", "proficient": False},
+    "arcana": {"value": "+0", "proficient": False},
+    "athletics": {"value": "+5", "proficient": True},
+    "deception": {"value": "+2", "proficient": False},
+    "history": {"value": "+2", "proficient": True},
+    "insight": {"value": "+1", "proficient": False},
+    "intimidation": {"value": "+2", "proficient": True},
+    "investigation": {"value": "+0", "proficient": False},
+    "medicine": {"value": "+1", "proficient": False},
+    "nature": {"value": "+0", "proficient": False},
+    "perception": {"value": "+3", "proficient": True},
+    "performance": {"value": "+2", "proficient": False},
+    "persuasion": {"value": "+4", "proficient": True},
+    "religion": {"value": "+0", "proficient": False},
+    "sleightOfHand": {"value": "-1", "proficient": False},
+    "stealth": {"value": "-1", "proficient": False},
+    "survival": {"value": "+1", "proficient": False}
+  },
+  "hitPoints": {
+    "maximum": 12,
+    "current": 12,
+    "temporary": 0
+  },
+  "armorClass": 17,
+  "initiative": "-1",
+  "speed": "30 feet",
+  "equipment": {
+    "armor": "Chain mail",
+    "weapons": {
+      "greataxe": {
+        "attackBonus": "+5",
+        "damageType": "1d12 + 3 slashing"
+      },
+      "javelin": {
+        "attackBonus": "+5",
+        "damageType": "1d6 + 3 piercing",
+        "notes": "Can throw a javelin 30 feet or up to 120 feet with disadvantage on the attack roll."
+      }
+    },
+    "other": [
+      "Backpack",
+      "Blanket",
+      "Tinderbox",
+      "2 days of rations",
+      "Waterskin",
+      "Set of fine clothes",
+      "Signet ring",
+      "Scroll of pedigree"
+    ]
+  },
+  "currency": {
+    "gold": 25,
+    "silver": 0,
+    "copper": 0,
+    "electrum": 0,
+    "platinum": 0
+  },
+  "proficienciesLanguages": {
+    "proficiencies": "All armor, shields, simple weapons, martial weapons, playing cards",
+    "languages": ["Common", "Draconic", "Dwarvish"]
+  },
+  "backgroundInfo": {
+    "humanRaceDescription": "Youngest of common races, innovators, achievers, pioneers, adaptable and ambitious, various cultures and physical characteristics.",
+    "fighterClassDescription": "Diverse class, unparalleled mastery with weapons and armor, knowledge of combat skills, well acquainted with death.",
+    "nobleBackground": "Family of wealth, power, privilege, affected by Mount Hotenow eruption, goal to civilize Phandalin, lawful neutral alignment, belief in law and order.",
+    "personalGoal": "Civilize Phandalin. Meant for more than being a ruler of nothing at all. Rebuilding Corlinn Hill impractical due to the volcano. Phandalin, sacked by orcs five centuries ago, is now being rebuilt and needs a civilizing influence to bring law and order.",
+    "alignmentDescription": "Lawful Neutral. Essential to establish law and order, even if it requires an iron fist. Nobility bound by honor and tradition to protect people from threats to stability. An organized society prevents evil and chaos."
+  },
+  "featuresAndTraits": {
+    "secondWind": "Regain hit points equal to 1d10 + fighter level, usable once per short or long rest.",
+    "fightingStyle": "Defense, +1 bonus to AC while wearing armor",
+    "positionOfPrivilege": "Noble birth, welcome in high society, can secure an audience with a local noble"
+  },
+   "personality_characteristics": {
+    "personalityTraits": "Flattery, dislike for getting dirty, preference for suitable accommodations",
+    "ideals": "Protect common people, not bully them",
+    "bonds": "Greataxe family heirloom, most precious possession",
+    "flaws": "Hard time resisting allure of wealth, especially gold"
+  },
+  "levelUpInfo": {
+    "2ndLevel": {
+      "experiencePoints": 300,
+      "actionSurge": "Take one additional action on your turn, usable once per short or long rest."
+    },
+    "3rdLevel": {
+      "experiencePoints": 900,
+      "improvedCritical": "Weapon attacks score a critical hit on a roll of 19 or 20."
+    },
+    "4thLevel": {
+      "experiencePoints": 2700,
+      "abilityScoreImprovement": {
+        "strengthIncrease": "Strength increases to 18, resulting in +4 modifier, increased attack bonus, damage for Strength-based attacks, and Athletics."
+      }
+    },
+    "5thLevel": {
+      "experiencePoints": 6500,
+      "extraAttack": "Make two attacks instead of one when taking the Attack action.",
+      "proficiencyBonusIncrease": "Increases to +3, affecting attack bonus, saving throws, skills, and passive Wisdom (Perception)."
+    }
+  }
+}
+
+])
 
 #for parts in storyline:
 #    client.lost_mines.story.insert_one(parts)
+# DOES SAME AS LINE OF CODE BELOW. KEPT THIS IN FOR STUDYING PURPOSES
 
 client.lost_mines.story.insert_many(storyline)
