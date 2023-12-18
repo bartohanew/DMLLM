@@ -75,9 +75,10 @@ storyline = [
     {
         'name': "approach cave",
         'description': """
-            When the characters cross to the east side of the stream, they can see around the screening thickets to area 2. This is a goblin guard post, though the goblins here are bored and inattentive.
-            On the east side of the stream flowing from the cave mouth, a small area in the briar thickets has been hollowed out to form
-            a lookout post or blind. Wooden planks flatten out the briars and provide room for guards to lie hidden and watch the area-including a pair of goblins lurking there right now!
+            When the characters cross to the east side of the stream, they can see around the screening thickets to area 2. 
+            This is a goblin guard post, though the goblins here are bored and inattentive.
+            On the east side of the stream flowing from the cave mouth, a small area in the briar thickets has been hollowed out to form a lookout post or blind. 
+            Wooden planks flatten out the briars and provide room for guards to lie hidden and watch the area-including a pair of goblins lurking there right now!
             Two goblins are stationed here. If the goblins notice intruders in area 1, they open fire with their bows, shooting through the thickets and probably catching the characters by surprise. If the goblins don't notice the adventurers in area 1, they spot them when they splash across the stream, and neither side is surprised.
             Characters moving carefully or scouting ahead might be able to surprise the goblin lookouts. Have each character who moves ahead make a Dexterity (Stealth) check contested by the goblins' passive Wisdom (Perception)
             Thickets. The thickets around the clearing are difficult terrain, but they aren't dangerous-just annoying. They provide half cover to creatures attacking through them. (See "Difficult Terrain" and "Cover" in the rulebook for more information.)
@@ -118,7 +119,8 @@ storyline = [
         """,
         "next_steps": {
             "cave_4": "If the party decides to continue into the cave.",
-            "cave_1": "If the party decides to leave the cave."
+            "cave_1": "If the party decides to leave the cave.",
+            "cave_8": "If the party successfully climbs the fissure.",
         }
     },
     {
@@ -286,6 +288,35 @@ storyline = [
         The goblins in area 7 can release a second flood by opening the second pool, but they don't do this unless the goblin on the bridge tells them to. 
         The goblin on the bridge waits to see if the first flood got rid of all the intruders before calling for the second to be released.
         """
+    },
+    {
+        "name": "cave_8",
+        "description": """
+            The leader of the goblinoids insists on keeping the bulk of the raiders' stolen goods in his den. The Cragmaws' plunder from the last month of raiding and ambushing caravans is here.
+            Sacks and crates of looted provisions are piled up in the south end of this large cave_ To the west, the floor slopes toward a narrow opening that descends into darkness. A larger opening leads north down a set of natural stone steps, the roar of falling water echoing from beyond. In the middle of the cavern, the coals ofa large fire smolder.
+            Klarg the bugbear shares this cave with his mangy pet wolf, Ripper, and two goblins. The bugbear is filled with delusions of grandeur and views himself as a mighty warlord just beginning his career of conquest. He is not entirely sane, referring to himself in the third person ("Who dares defy Klarg?" or "Klarg will build a throne
+            from your bones, puny
+            ones!"). The goblins under his command resent his bullying.
+            Fire Pit. The hot coals in the central fire pit deal 1 fire damage to any creature that enters the fire pit, or 1d6 fire damage to any creature that falls prone there. A creature can take each type of damage only once per round.
+            Natural Chimney. A niche
+            in the western wall forms the top of a shaft that descends 30 feet to area 3. See that area for information on climbing the natural chimney.
+            Supplies. The piles of sacks and crates can provide half cover to any creature fighting or hiding behind them. Most are marked with the image of a blue lion--the symbol of the Lionshield Coster, a merchant company with a warehouse
+            and trading post in Phandalin. Hidden among the supplies is an unlocked treasure chest
+            belonging to Klarg (see the "Treasure" section). Any character who searches the supplies finds the chest.
+            DEVELOPMENTS
+            If Klarg is warned by the goblins in area 7 that the hideout is under attack, he and his wolf hide behind stalagmites while the goblins take cover behind the piles of supplies, hoping to ambush the characters when they enter the cave.
+            If Klarg and company are not warned about possible attackers, the characters have a good chance to surprise them. The easiest way for the characters to achieve this
+            is to climb the chimney from area 3, since Klarg does not expect an attack from that direction.
+            If the wolf is killed, the bugbear attempts to climb down the chimney to area 3 and flee the cave complex.
+            TREASURE
+            The captured stores are bulky, and the characters will need a wagon to transport them. If they return the supplies to the Lionshield Coster in Phandalin (see part 2, "Phandalin''), they earn a reward of 50 gp and the friendship of Linene and her company.
+            In addition to the stolen provisions, Klarg has a treasure chest that contains 600 cp, 110 sp, two potions of healing, and ajade statuette of a frog with tiny golden orbs for eyes (40 gp). The frog statuette is small enough to fit in a pocket or pouch.
+        """,
+        "next_steps": {
+            "cave_7": "if the party heads north, towards the waterfall",
+            "cave_3": "if the party goes through the fissure",
+        }
+
     }
 ]
 
@@ -307,6 +338,8 @@ class Convo:
         if self.story_part_name is None:
             self.story_part_name = 'start'
             self.set_txt("story_part", self.story_part_name)
+        
+        print("Continuing from...", self.story_part_name)
 
         dialogue = self.get_txt("dialogue")
         if dialogue is None:
@@ -316,7 +349,6 @@ class Convo:
             self.briefly_summarize()
 
         self.summary = []
-        self.story_part_name = 'start'
         self.type_modifiers = {
             'strength': 2,
             'dexterity': 1,
@@ -409,16 +441,16 @@ class Convo:
 
         return "Changed scene to " + to
     
-    def roll_hit_dice(self, n_sides, n_dice, type=None, **kwargs):
+    def roll_hit_dice(self, n_sides, n_dice, kind=None, **kwargs):
         import random
         result = [ random.randint(1, n_sides) for i in range(n_dice) ]
         result = result_og = sum(result)
         mod = 0
-        if type is not None and type in self.type_modifiers:
-            mod += self.type_modifiers[type]
+        if kind is not None and kind in self.type_modifiers:
+            mod += self.type_modifiers[kind]
         result += mod
 
-        return f"Rolled {n_dice}d{n_sides} ({type}) {result_og} + {mod} = {result}"
+        return f"Rolled {n_dice}d{n_sides} (kind={kind}) {result_og} + {mod} = {result}"
     
 
     # ------------------
@@ -499,7 +531,7 @@ class Convo:
             {{"type": "change_scene", "to": "scene name"}}
 
             To roll hit dice, type:
-            {{"type: "roll_hit_dice", "n_dice": 1, "n_sides": 6, "type": "strength"}}
+            {{"type": "roll_hit_dice", "n_dice": 1, "n_sides": 6, "kind": "strength"}}
 
             To add or remove from inventory, type:
             {{"type: "inventory", "action": "add|remove", "object": "object name, description, and/or stats"}}
@@ -562,7 +594,12 @@ class Convo:
         my_messages = []
         inventory = self._format_inventory()
         prompt = f"""
-        You are a DM. 
+        You are a DM.
+        Speak directly to the player.
+        You should not reveal information about the scene they would not otherwise know.
+        Usually they can access otherwise unseen information if they roll a perception, history, investigation, nature, or insight check.
+        Be relatively brief in your responses.
+
         You are currently in the scene "{story_part['name']}".
 
         Your current inventory is:
