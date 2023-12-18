@@ -1,22 +1,9 @@
-from common import *
-from modularity import flatten_whitespace, indent
-import json
-
-from pymongo import MongoClient
-db = MongoClient()['DMLLM']
+from .common import *
 
 adventure_name = "alec_first"
-
 # find the last summary of the state the game was left in
-
-
 #model = "gpt-3.5-turbo"
 model = "gpt-4-1106-preview"
-
-from modularity import OpenAI
-import traceback
-
-client = OpenAI()
 
 class DM:
 
@@ -43,40 +30,6 @@ class DM:
 
         self.main_character = None
 
-    # ------------------
-    # GETTING GPT
-    # ------------------
-
-    def json_retry_loop(self, messages, model=model, loop_i=0):
-        while True:
-            response = get_response(messages, model=model)
-            try:
-                return json.loads(response)
-            except json.decoder.JSONDecodeError:
-                messages.append({'role': 'system', 'content': "Invalid JSON. Please try again."})
-
-                loop_i += 1
-                if loop_i > 3:
-                    raise
-                
-                return self.json_retry_loop(messages, model=model, loop_i=loop_i)
-
-    # ------------------
-    # SAYING STUFF
-    # ------------------
-
-    def humansay(self, content):
-        self.M.append({"role": "user", "content": content})
-        self.add_txt("dialogue", f"Player:\n{content}")
-
-    def computersay(self, content):
-        self.M.append({"role": "assistant", "content": content})
-        self.add_txt("dialogue", f"DM:\n{content}")
-        print("DM:", content)
-
-    def computersay_self(self, content):
-        self.M.append({"role": "system", "content": content})
-        self.add_txt("dialogue", f"DM (to themselves):\n{content}")
 
     # ------------------
     # Thinking, Acting, and Responding
@@ -201,6 +154,22 @@ class DM:
         # (mostly) clear the messages
         self.M = self.M[-2:]
 
+    # ------------------
+    # SAYING STUFF
+    # ------------------
+
+    def humansay(self, content):
+        self.M.append({"role": "user", "content": content})
+        self.add_txt("dialogue", f"Player:\n{content}")
+
+    def computersay(self, content):
+        self.M.append({"role": "assistant", "content": content})
+        self.add_txt("dialogue", f"DM:\n{content}")
+        print("DM:", content)
+
+    def computersay_self(self, content):
+        self.M.append({"role": "system", "content": content})
+        self.add_txt("dialogue", f"DM (to themselves):\n{content}")
 
     # ------------------
     # Running the Conversation
@@ -222,81 +191,5 @@ class DM:
         while True:
             self.run()
 
-class Entity:
-    def __init__(self, name, description, stats):
-        self.name = name
-        self.description = description
-        self.stats = stats
-
-    def __repr__(self):
-        return f"Entity({self.name}, {self.description}, {self.stats})"
-
-    def __str__(self):
-        return f"Entity({self.name}, {self.description}, {self.stats})"
-
-    def inventory(self):
-
-        inventory = self.get_txt("inventory")
-        if inventory is None:
-            if self.story_part_name == 'start':
-                self.inventory("add", "10 gold pieces")
-                self.inventory("add", "a backpack")
-                self.inventory("add", "a bedroll")
-                self.inventory("add", "a mess kit")
-                self.inventory("add", "a tinderbox")
-                self.inventory("add", "10 torches")
-                self.inventory("add", "10 days of rations")
-                self.inventory("add", "a waterskin")
-                self.inventory("add", "50 feet of hempen rope")
-                return self._format_inventory()
-            else:
-                inventory = "The player has nothing."
-
-        return inventory
 
 
-class Battle(Convo):
-
-    def __init__(self, battle_description):
-        self.battle_description = battle_description
-        self.generate_enemies()
-
-        super().__init__(adventure_name)
-
-    def generate_enemies(self, model=model):
-        my_messages = []
-        prompt1 = flatten_whitespace(f"""
-            Your goal will be to set up for a tabletop RPG battle.
-            You are to interpret the following description of the battle, and generate enemies for the battle.
-        """)
-        prompt2 = flatten_whitespace(f"""
-            Your response should be a JSON list of dictionaries, each with the following keys:
-                - name
-                - description
-                - stats
-                                     
-            For example:
-            [
-                {{"name": "Thwark", "description": "A goblin. A small, green creature.", "stats": {{"hp": 10, "ac": 15, "str": 10, "dex": 10, "con": 10, "int": 10, "wis": 10, "cha": 10}}}},
-                {{"name": "Mannard", "description": "A goblin. A small, green creature", "stats": {{"hp": 10, "ac": 15, "str": 10, "dex": 10, "con": 10, "int": 10, "wis": 10, "cha": 10}}}},
-            ]
-        """)
-        prompt3 = flatten_whitespace(f"""
-            The battle description is:
-            {indent(self.battle_description, 2)}
-        """)
-        
-        my_messages.append({'role': 'system', 'content': prompt1})
-        my_messages.append({'role': 'system', 'content': prompt2})
-        my_messages.append({'role': 'user', 'content': prompt3})
-
-        enemy_json = self.json_retry_loop(my_messages, model=model)
-        self.enemies = [
-            Entity(**enemy)
-            for enemy in enemy_json
-        ]
-
-
-
-c = Convo(adventure_name)
-c.loop()
