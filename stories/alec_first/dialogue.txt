@@ -227,6 +227,118 @@ Seconds stretch into a tense minute, and then two. The forest still seems eerily
 Roll for initiative!
 DM (to themselves):
 Changed scene to combat with goblins
+
+DM (to themselves):
+The previous scene has been truncated, and now we are 3 days in the future.
+DM (to themselves):
+Changed scene to approach cave
+DM (to themselves):
+Skipped ahead to approaching the goblin hideout. The battle was difficult, and afterwards we were able to track the goblins back to their hideout.
+DM:
+(summarizing from last time...) Oliver's fireball spell incinerated the tree and alerted nearby goblins, leading to a combat encounter; three days post-battle, your party is now stealthily approaching the goblin hideout to confront the remaining threat.
+Player:
+What do we see around us?
+DM (to themselves):
+Changed scene to approach cave
+DM (to themselves):
+(thinking...) Consider describing the landscape using sensory details to set the moodâ€”mention rocky terrain, gnarled trees, or the sound of dripping water from within the cave. Offer hints of recent goblin activity like discarded loot or tracks, and remind players to be on their guards for possible lookouts or traps.
+DM:
+As you edge closer to the mouth of the cave from which the stream flows, the murmuring water echoes against the rocky outcrops, providing a constant, soothing background noise that belies the potential danger ahead. The air is tinged with the earthy smell of wet stone and moss, as well as the faint, rank scent of goblinâ€”a mixture of sweat, dirt, and poorly cured leather.
+
+The terrain around you is uneven and strewn with boulders and patches of brambles, making your advance slower and more laborious. You notice signs of frequent passage in the dirt, with numerous small, humanoid footprints intermixed with the tracks of wolvesâ€”presumably the goblins' hunting companions or pets.
+
+Ahead, the sizeable cave entrance looms, dark and foreboding, as the stream trickles out from its gaping maw. The thickets around the clearing rustle softly with the occasional breeze, offering limited visibility and providing hiding places that could conceal lurking enemies.
+
+To either side of the stream are flattened areas within the briars, clearly artificial in nature. The wooden planks laid out across the ground suggest a lookout or blind where guards might lie hidden, watching for intruders. As you scan the surroundings, you spot a glint of metal and the shift of small, furtive figures: a pair of goblins, armed and seemingly inattentive, stationed at these guard posts.
+
+Remember, if you wish to avoid detection and possibly gain the element of surprise, moving carefully and quietly will be key. Those of you who choose to scout ahead, make sure to make a Dexterity (Stealth) check to see if you can approach undetected by the goblins' passive Wisdom (Perception). Proceed with caution.
+Player:
+We set up camp here
+DM (to themselves):
+(thinking...) Consider the risks of camping near the goblin hideout. Advise them on stealth and setting up watches for a potential ambush. Also, remind them to take care of any light or noise that could give away their position, and perhaps suggest they use this time to plan their approach or gather information about the goblin patrols and defenses.
+DM:
+As you decide to set up camp near the goblin hideout, you understand the need for utmost discretion. You find a spot that's out of direct line of sight from the guardsâ€™ outpost and offers some natural concealment, perhaps in a small depression or behind a large outcropping of rocks. You go about setting up your camp with as little noise as possible.
+
+Here are a few precautions and actions you might consider to maintain stealth:
+
+1. **No Fires**: Forgoing a campfire will prevent light from giving away your position. It may mean a cold night and uncooked meals, but it's essential to stay hidden.
+   
+2. **Silent Watches**: Set up a watch rotation to keep an eye on the goblins and guard against being surprised in your sleep. Ensure everyone knows they need to be as quiet as possible while on watch.
+
+3. **Camouflage**: Use surrounding natural materials like branches, leaves, or mud to disguise tents or sleeping areas further.
+   
+4. **Dim Light**: If you must use light, keep it dim and shielded so it doesn't escape to alert the goblins.
+   
+5. **Noise Discipline**: Keep chatter to a whisper and avoid unnecessary movement that could rustle foliage or clink gear.
+   
+6. **Planning**: Use this time to observe the goblin's behaviors and guards' shifts, if visible. Plan your approach to the cave based on these observations.
+
+7. **Scouting**: If someone has the ability to do so safely, a close reconnaissance under the cover of darkness could yield valuable information about the guard rotations and cave entrance defenses.
+
+You have the rest of the day and night ahead of you. Let me know how you prepare your camp, what precautions you are taking, and if anyone is doing anything specific during this downtime.
+Player:
+We set up camp, keeping these precautions in mind. I take first watch, as the group falls to sleep for the night.
+DM (to themselves):
+(thinking...) You find a concealed vantage point that offers a clear view of the cave entrance and the surrounding area while keeping you hidden. You stay vigilant, keeping your eyes and ears open for any signs of movement or sounds that could indicate a threat approaching. The weight of responsibility rests on you to alert your companions at the first sign of danger, ensuring their safety while they rest. During this quiet time, you also take the opportunity to reflect on the upcoming challenges and consider any strategies that might give you an advantage in dealing with the goblin hideout.
+DM:
+You settle into your watch position, keeping the camp covered in shadows and natural camouflage as your companions' breathing evens out into the rhythm of sleep. The night is cool and quiet, the only sounds being the gentle gurgle of the stream and the occasional rustle of wildlife in the underbrush.
+
+Eyes sharp, you monitor the cave entrance and the two goblin lookouts. They seem entirely unaware of your presence, their attention wavering between casual vigilance and boredom-induced inattentiveness. Hours pass, and the moon arcs across the star-filled sky, casting silver light that dances off the water's surface.
+
+Every so often, you scan the perimeter of your small encampment, ensuring no curious creatures or errant goblins stumble upon your resting group. You take the time to think through potential plans for when morning comes; considering ambush tactics, escape routes, and even what to do if everything goes sideways.
+
+As dawn begins to hint at the horizon, your companions stir, and it's time to wake them gently and discuss the plan of action. Please make a Perception check to determine the final outcome of your watch and if any details were noticed during the night.
+DM:
+(summarizing from last time...) As the party's designated lookout, you've been attentively watching for danger while your companions slept, contemplating strategies for the anticipated goblin hideout encounter, and as dawn approaches, you must roll a Perception check to conclude your watch and reveal any significant observations made during the night.
+Player:
+Can you roll for me?
+DM (to themselves):
+Rolled 1d20 (kind=perception) 10 + 0 = 10
+DM (to themselves):
+(thinking...) With a roll of 10, the lookout's watch seems to have been relatively uneventful, but it's an average resultâ€”there may have been subtle signs or movements missed. Consider providing them with some helpful but not crucial information they observed, like goblin shift changes or animal activity, foreshadowing future encounters.
+DM:
+As the soft hues of dawn begin to paint the sky, you take one last vigilant sweep of the surroundings. With a roll of 10 on your Perception checkâ€”sufficient but not exceptionalâ€”you have not noticed any immediate threats or suspicious activity that would cause alarm. However, you did observe that the goblin lookouts seem to change shifts at regular intervals, suggesting a level of organization within their ranks that could mean a structured defense inside the hideout. Apart from that, no peculiar occurrences or creatures have approached your camp during the night.
+
+You decide it's time to gently rouse your companions, briefing them on the goblin lookout patterns before discussing and finalizing your plan of action for the day ahead. Your watch has ended without incident, and with the knowledge gained, you feel a bit more prepared for what might lie inside the goblin stronghold.
+Player:
+We sneak up to the river, using the sounds as a guard for our footsteps, in the early dawn light. With our understanding of their rounds, we aim for a moment when they are distracted
+DM (to themselves):
+(thinking...) Encourage the party to make Stealth checks as they approach the river, using the sound of the water to mask their movements. Since they have knowledge of the goblin shift changes, you might consider creating a window of opportunity where the goblins are at their least attentive, perhaps during a shift change or when one seems particularly distracted. This could provide the players with a chance to gain the element of surprise or avoid an encounter altogether.
+DM:
+You cautiously approach the riverbank, using the natural cover of the environment and timing your movements with the ambient noise of the rushing water. The early dawn light provides enough visibility to avoid any missteps while still offering the cloak of twilight to conceal your passage.
+
+As you draw closer, you start to discern the distinct guttural tone of goblin voices. They seem preoccupied, with one goblin nudging the other, pointing towards the horizon, likely commenting on the break of day.
+
+Now is your chance. Everyone, please roll a Stealth check to determine how quietly and inconspicuously you can maneuver into position while the goblins' backs are turned and their attention is elsewhere.
+Player:
+OK, roll stealth check please.
+DM (to themselves):
+Rolled 1d20 (kind=stealth) 15 + 0 = 15
+DM (to themselves):
+(thinking...) With a roll of 15, the party seems to be moving quite stealthily, capitalizing on the goblins' distraction. This suggests a good chance at reaching an advantageous position unobserved, possibly setting up an ambush or bypassing them altogether. Consider narrating their advance as they use the environment to hide their approach and prepare themselves for what they decide to do next.
+DM:
+The soft sounds of your careful footsteps are easily masked by the gentle rush of the river as you glide like shadows among the trees and underbrush. With a roll of 15 for your group's Stealth check, your covert advance toward the distracted goblins is a silent endeavor, ensuring that no unwanted attention falls upon you.
+
+You manage to position yourselves strategically, using the goblins' momentary lapse in vigilance to your advantage. You find yourselves within striking distance, should you choose to ambush, or alternatively well-placed to continue past them undetected if you prefer to avoid confrontation.
+
+Please let me know how you would like to proceed. Do you wish to launch a surprise attack on the lookouts, thereby potentially securing the cave entrance, or would you rather bypass them entirely, taking the risk of leaving enemies behind you but maintaining the element of surprise for whatever lies ahead?
+Player:
+Yes, I want to calm the wolves
+DM (to themselves):
+Rolled 1d20 (kind=Animal Handling) 15 + 0 = 15
+DM (to themselves):
+(thinking...) With a roll of 15 on the Animal Handling check, the player has a good chance of pacifying the wolves without causing a commotion. Describe how they carefully approach the wolves, using soothing tones and deliberate movements to convey their peaceful intentionsâ€”potentially allowing the party to either bypass the beasts or even turn them into reluctant allies within the cave. Keep in mind potential repercussions or developments depending on how this interaction unfolds.
+DM:
+You approach the wolves with measured steps, your hands outstretched in a calming gesture, projecting an aura of peace. Speaking in soothing tones, you assure the snarling creatures of your benign intentions. The wolves, still tense, focus on you with narrowed eyes, their growls subsiding ever so slightly as they try to discern your motive.
+
+With a roll of 15 on your Wisdom (Animal Handling) check, the air around you seems to settle, and the wolves' rigid postures relax incrementally. They begin to show signs of submissionâ€”ears pulling back and tails lowering cautiously. 
+
+The chains rattle less violently now, and one wolf, braver than the others, steps forward hesitantly, sniffing the air around you. You remain perfectly still, allowing it to familiarize itself with your scent.
+
+The wolves, though not entirely won over, seem to accept your presence for the moment and no longer present an immediate threat. They allow you to move throughout the room, granting you passage without hostility. 
+
+You can now choose to continue exploring the cave, perhaps ascending the fissure to area 8 or proceeding further into the kennel chamber, all while exercising care to ensure the wolves remain placid. What will you do next?
+
 DM:
 (summarizing from last time...) Oliver cast a powerful fireball spell to clear a fallen tree, which caught the attention of a group of goblins, who have now ambushed your party, leading to the initiation of combat. Roll for initiative to determine the order of actions in this encounter.
 Player:
@@ -238,9 +350,9 @@ DM (to themselves):
 DM:
 As the Dungeon Master, you watch with interest as your players gather around the table, each ready to breathe life into their character for the first time. You encourage them to speak in turn, detailing the key aspects of their roles within this unfolding story of adventure and danger.
 
-"Let's begin today's session with a brief introduction of your characters," you say, smiling warmly at the group, "Tell us your name, your appearance, your background, and how you came to know our mutual friend, Gundren Rockseeker. Let's go around the table—don't be afraid to sprinkle in details or anecdotes that make your character come alive. Who would like to start?"
+"Let's begin today's session with a brief introduction of your characters," you say, smiling warmly at the group, "Tell us your name, your appearance, your background, and how you came to know our mutual friend, Gundren Rockseeker. Let's go around the tableï¿½don't be afraid to sprinkle in details or anecdotes that make your character come alive. Who would like to start?"
 
-With your notebook in hand, you prepare to jot down notes about each character—traits, quirks, and histories that you can weave into the narrative tapestry of the campaign. You're not just looking for names and skill sets; you're searching for the threads of connection that will bind this group together as they embark on their journey through the world you've crafted.
+With your notebook in hand, you prepare to jot down notes about each characterï¿½traits, quirks, and histories that you can weave into the narrative tapestry of the campaign. You're not just looking for names and skill sets; you're searching for the threads of connection that will bind this group together as they embark on their journey through the world you've crafted.
 Player:
 where am i?
 DM (to themselves):
@@ -250,7 +362,7 @@ You are gathered in a cozy, dimly lit room of the Stonehill Inn, located in the 
 
 Evening has descended upon the town, and outside the windows, you can see the last blush of sunset giving way to twilight. The inn is pleasantly busy, with a gentle murmur of conversation and the occasional clink of tankards from the local patrons, creating a backdrop of comforting, mundane life. Your party, however, is gathered for something far from mundane; you're here to discuss the details of an upcoming job provided by Gundren Rockseeker, a dwarf with grand entrepreneurial plans for the mines near Phandalin.
 
-As you introduce your characters to each other, consider this setting as a safe haven before you set out on your quest—your point of origin where friendships are formed, plans are made, and adventures begin. How does each character fit into this rustic scene? Are they a regular at the inn, or perhaps a newcomer to these parts? This is your moment to establish not just who you are, but where you stand as the tale starts to unfold.
+As you introduce your characters to each other, consider this setting as a safe haven before you set out on your questï¿½your point of origin where friendships are formed, plans are made, and adventures begin. How does each character fit into this rustic scene? Are they a regular at the inn, or perhaps a newcomer to these parts? This is your moment to establish not just who you are, but where you stand as the tale starts to unfold.
 Player:
 who am i?
 DM (to themselves):
@@ -362,7 +474,7 @@ With a knowing smile, you add, "And so, bound by a trove of secrets and the prom
 
 **Character Equipment Note:**
 
-Upon your person, you carry a small, unassuming stone, smooth and cool to the touch. This rock, given to you by Gundren himself, serves as a token of your shared discoveries and a reminder of the knowledge that you both still keep hidden from prying eyes. It might seem trivial to the untrained observer, but to you and Gundren, it is a silent oath—a promise of adventure and secrets yet to be uncovered.
+Upon your person, you carry a small, unassuming stone, smooth and cool to the touch. This rock, given to you by Gundren himself, serves as a token of your shared discoveries and a reminder of the knowledge that you both still keep hidden from prying eyes. It might seem trivial to the untrained observer, but to you and Gundren, it is a silent oathï¿½a promise of adventure and secrets yet to be uncovered.
 
 Now, as you finish your tale, your gaze sweeps the circle of your newfound companions, each with their own stories and motives. The bond you share with Gundren may have brought you together, but it will be the choices you all make as a group that will determine your collective fate.
 
@@ -382,7 +494,7 @@ DM (to themselves):
 DM:
 A warm glow of anticipation settles on the group as each member confirms their readiness to embark on the quest that Gundren Rockseeker has set before you. Knowing nods and silent affirmations are exchanged as the circle of adventurers tighten their grips on trusted weapons, adjust their packs, and share a collective breath before the first step of many is taken.
 
-The sun begins its descent below the horizon, painting the sky in vibrant hues of orange and purple as the air cools around you. You find yourselves at the outskirts of a bustling town where the final preparations for the journey are being made. Gundren has gone ahead to the town of Phandalin to take care of business but has left you with a simple, yet crucial task—to safely transport a wagon laden with supplies from this very town to Barthen's Provisions in Phandalin.
+The sun begins its descent below the horizon, painting the sky in vibrant hues of orange and purple as the air cools around you. You find yourselves at the outskirts of a bustling town where the final preparations for the journey are being made. Gundren has gone ahead to the town of Phandalin to take care of business but has left you with a simple, yet crucial taskï¿½to safely transport a wagon laden with supplies from this very town to Barthen's Provisions in Phandalin.
 
 As the last rays of sunlight vanish, a sense of urgency propels the party into motion towards the wagon, ready to guard it against the unknown perils of the Triboar Trail. The road ahead will not be gentle; whispers of bandits lurking and creatures stirring in the growing darkness remind you that vigilance will be your closest ally.
 
@@ -404,19 +516,19 @@ Flanking the opposite side of the wagon is Sariel Nightshade, an elven ranger wh
 
 Lastly, at the rear of the group, you observe Aric Shadowcloak, a human rogue whose presence is as unassuming as it is calculating. His hands rest casually on the hilts of his twin daggers, tools which have extricated him and Gundren from more than one unsavory entanglement.
 
-Each member of your party carries a reason to see this endeavor through, bound not only by Gundren's friendship but also the lure of what secrets and riches lie hidden beneath the rugged landscape of the Sword Coast. With such companions by your side, the road ahead – although uncertain – brims with the promise of legend and loot alike.
+Each member of your party carries a reason to see this endeavor through, bound not only by Gundren's friendship but also the lure of what secrets and riches lie hidden beneath the rugged landscape of the Sword Coast. With such companions by your side, the road ahead ï¿½ although uncertain ï¿½ brims with the promise of legend and loot alike.
 
-Now, as the sky darkens and the trail awaits, you look to each other and consider – who will lead, who will scout ahead, and how will you work together to ensure the safety of the supplies and each other?
+Now, as the sky darkens and the trail awaits, you look to each other and consider ï¿½ who will lead, who will scout ahead, and how will you work together to ensure the safety of the supplies and each other?
 Player:
 we set up camp. we dont make a fire. all the creatures with darkvision take turn on watch. we want to get through the night with a long rest
 DM (to themselves):
 (thinking...) As you settle in for the night without a fire to betray your position, you strategize the watch order, maximizing the use of your allies' darkvision. You know the importance of a long rest for the trials ahead, and you're confident that your precautions will reduce the risk of an ambush, allowing you to start your journey at dawn, refreshed and ready.
 DM:
-The decision is made with thoughtful nods of agreement: you will set up a discreet camp and rest before the journey becomes more perilous. Without the crackle and light of a fire, your camp is nothing more than shifting shadows to any who might pass by—a welcome anonymity in the dangerous wilds.
+The decision is made with thoughtful nods of agreement: you will set up a discreet camp and rest before the journey becomes more perilous. Without the crackle and light of a fire, your camp is nothing more than shifting shadows to any who might pass byï¿½a welcome anonymity in the dangerous wilds.
 
 Thalia Emberheart and Sariel Nightshade, with their keen elven eyes, volunteer for the first and last watches of the night, bookending the long rest with their vigilant gaze. Borin Ironfist, whose darkvision pierces the darkness just as well, takes the middle watch. Aric Shadowcloak, lacking the innate ability to see in the dark but no less sharp, insists on taking a turn, his ears attuned to the slightest sound as an extra precaution.
 
-The party settles down into their bedrolls, weapons within reach, a silent agreement that each will wake at the slightest sign of trouble. The night is filled with the sounds of the wild—a distant wolf's howl, the rustle of leaves in the wind, and the occasional hoot of an owl.
+The party settles down into their bedrolls, weapons within reach, a silent agreement that each will wake at the slightest sign of trouble. The night is filled with the sounds of the wildï¿½a distant wolf's howl, the rustle of leaves in the wind, and the occasional hoot of an owl.
 
 Shift after shift passes without incident. Each member of the watchful quartet peers into the darkness, senses honed for any sign of danger, yet also appreciative of the tranquility that nature offers in these quiet hours.
 
@@ -444,7 +556,7 @@ Just as you round a gentle bend, a sudden rustling draws your attention to the r
 
 You all release the breath you held, some with a chuckle of relief, others with a shake of their head. It was just a deer, but the Triboar Trail is no place for complacency.
 
-Moving on, the previous false alarm keeps everyone more alert. As you proceed, you spot something in the distance—a plume of smoke rising from beyond a hill to the northeast. It's too large for a traveler's campfire and in the wrong location for any of the regular homesteads you know to be along the Trail.
+Moving on, the previous false alarm keeps everyone more alert. As you proceed, you spot something in the distanceï¿½a plume of smoke rising from beyond a hill to the northeast. It's too large for a traveler's campfire and in the wrong location for any of the regular homesteads you know to be along the Trail.
 
 What do you do? Do you investigate the source of the smoke, potentially offering aid or finding trouble? Or do you continue with your mission, focusing on the safety of your charge and the urgency of your delivery?
 Player:
@@ -458,7 +570,7 @@ Aric and Sariel quickly volunteer to scout ahead. Aric's stealth skills will ser
 
 The rest of the party follows with the wagon, but you take care to guide the oxen slowly, avoiding any treacherous patches of ground that could trap the wheels or spook the animals. Thalia keeps her hand near her bowstring, ready for any sign of danger, while Borin grips his axe, his eyes never stopping their vigilant search of the surroundings.
 
-After several minutes, Aric returns swiftly, using a series of hand signals to communicate that there is a camp ahead—it appears to be under attack by bandits. Sariel remains hidden nearby, ready to provide overwatch.
+After several minutes, Aric returns swiftly, using a series of hand signals to communicate that there is a camp aheadï¿½it appears to be under attack by bandits. Sariel remains hidden nearby, ready to provide overwatch.
 
 Now, you must make a choice: do you rush in to help the besieged camp, potentially gaining allies or valuable information at the risk of your own safety? Or do you bypass this conflict, protecting your cargo and mission but leaving those at the camp to their fate?
 

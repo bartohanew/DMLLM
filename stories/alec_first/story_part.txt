@@ -1,1 +1,1 @@
-create player
+cave_3
