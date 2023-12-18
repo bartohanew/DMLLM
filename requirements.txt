@@ -1,3 +1,5 @@
-git+https://github.com/amcgail/gpt-assistants.git
+#git+https://github.com/amcgail/gpt-assistants.git
 openai
-guidance
+#guidance
+python-dotenv
+pymongo

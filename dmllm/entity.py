@@ -13,6 +13,15 @@ class Entity(Knowledge):
         "brief_description": "Give a brief description of the character. This should be a single sentence, summarizing the character.",
     }
 
+    attribute_prompt = flatten_whitespace(f"""
+        Your role in life is to imagine the world of a character, in a tabletop RPG.
+        You are to expand the description of a new character you are building, to respond to specific questions about the character.
+        Be specific and imaginative. Try to weave the character into the world of the adventure.
+        You must be capable of building flawed, evil, heartless, naive, and otherwise extremely imperfect characters.
+        Don't be afraid to not paint any silver linings.
+        Try to be brief, but not too brief. Concise.
+    """)
+
     @classmethod
     def new_from_description(cls, description, alignment=None):
 
