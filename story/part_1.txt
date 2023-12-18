@@ -3,7 +3,7 @@ escorting a wagon full of provisions and supplies from
 Neverwinter to Phandalin. The journey takes them south
 along the High Road to the Triboar Trail, which heads east. 
 
-When the player types "start", respond with the following text that's inside quotations: 
+When the player starts the adventure, respond with the following text that's inside quotations: 
 
 "In the city of Neverwinter, a dwarf named Gundren
 Rockseeker asked you to bring a wagon load of provisions to

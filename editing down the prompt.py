@@ -1,9 +1,5 @@
 from common import *
 
-
-with open('how_to_dm.txt', 'r') as file:
-    how_to_dm = file.read()
-
 with open('story/adventure_hook.txt', 'r') as file:
     adventure_hook = file.read()
 
@@ -20,7 +16,6 @@ with open('story/goblin_ambush.txt', 'r') as file:
     goblin_ambush = file.read()
 
 sys_message = f"""
-{how_to_dm}
 {backstory}
 {adventure_hook}
 {part_1}
