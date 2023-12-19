@@ -32,11 +32,17 @@ class Adventure(Knowledge):
         for q in cls.questions:
             c.query(q)
 
+        NPC_ids = []
         for n in c.NPC_descriptions:
             e = Entity.new_from_description(n)
-
+            NPC_ids.append(e._id)
+        c.set('NPC_ids', NPC_ids)
+        
+        location_ids = []
         for l in c.location_descriptions:
             e = Location.new_from_description(l)
+            location_ids.append(e._id)
+        c.set('location_ids', location_ids)
 
         return c
 
@@ -90,12 +96,16 @@ class Quest(Knowledge):
             return "Invalid level. Please enter a level between 1 and 20."
 
     @classmethod
-    def new_from_description(cls, player_level=None):
+    def new_from_description(cls, description=None, player_level=None):
         c = cls.new()
 
-        if player_level is None:
+        if description is None:
+            description = "A quest."
+        c.set('description', description)
+
+        if player_level is not None:
             c.set('player_level', player_level)
-        c.set('level_advice', c.get_level_description(player_level))
+            c.set('level_advice', c.get_level_description(player_level))
 
         for q in cls.questions:
             c.query(q)
@@ -108,4 +118,7 @@ class Quest(Knowledge):
         return c
     
 if __name__ == "__main__":
-    story = Quest.new_from_description(player_level=18)
+    story = Quest.new_from_description(
+        description="I'm interested in doing something cartoony, with fantastical mythical twists and turns, and odd consequences of the universe being in 2d.",
+        player_level=3
+    )
