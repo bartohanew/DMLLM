@@ -33,6 +33,12 @@ class Knowledge:
         # Fallback to normal attribute access
         return super().__getattribute__(__name)
 
+    @classmethod
+    def new(cls, **kwargs):
+        knowledge_type = cls.__name__.lower()
+        cid = db[knowledge_type].insert_one(kwargs).inserted_id
+        c = cls(cid)
+        return c
         
     def current_information(self):
         str_parts = []
@@ -55,17 +61,10 @@ class Knowledge:
     def query(self, key):
         question = self.questions[key]
 
-        prompt1 = flatten_whitespace(f"""
-            Your role in life is to imagine the world of a character, in a tabletop RPG.
-            You are to expand the description of a new character you are building, to respond to specific questions about the character.
-            Be specific and imaginative. Try to weave the character into the world of the adventure.
-            You must be capable of building flawed, evil, heartless, naive, and otherwise extremely imperfect characters.
-            Don't be afraid to not paint any silver linings.
-            Try to be brief, but not too brief. Concise.
-        """)
+        prompt1 = self.attribute_prompt
 
         prompt2 = flatten_whitespace(f"""
-            The current character description is:
+            The current {self.knowledge_type} description is:
             {indent(self.current_information(), 2)}
         """)
 
@@ -76,7 +75,7 @@ class Knowledge:
         my_messages.append({'role': 'user', 'content': question})
 
         print("Asking:", question)
-        response = get_response(my_messages, model="gpt-3.5-turbo")
+        response = get_response(my_messages, model=DEFAULT_MODEL)
 
         try:
             response = json.loads(response)
