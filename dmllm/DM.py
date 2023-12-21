@@ -1,104 +1,8 @@
+import logging
+logger = logging.getLogger(__name__)
+
 from .common import *
 from .knowledge import Knowledge
-
-adventure_name = "alec_first"
-# find the last summary of the state the game was left in
-#model = "gpt-3.5-turbo"
-model = "gpt-4-1106-preview"
-
-class Session(Knowledge):
-    def __init__(self, _id):
-        super().__init__(_id)
-        
-        # get the messages
-        self.M = self.messages()
-
-    @classmethod
-    def new_with_player(self, player):
-        session = Session.new()
-        session.set('player_id', player._id)
-        return session
-
-    def messages(self, limit=None):
-        # sorted by dt, ascending, with the last message always the most recent
-        ms = db.messages.find({'session_id': self._id}).sort('dt', -1)
-        if limit is not None:
-            ms = ms.limit(limit)
-        return list(ms)
-
-    def _summarize_block(self, messages):
-        message_text = "\n".join([f"+ {x['role']}: {x['content']}" for x in messages])
-        prompt = f"""
-        Your goal is to summarize the plotpoints contained in the following conversation between a DM and a player.
-        In each plot point, be as specific as possible.
-        Keep note of any characters, locations, or items that are mentioned.
-        Do not include any information not present in the following messages!
-
-        Messages:
-        {message_text}
-        """
-
-        messages = [
-            {"role": "system", "content": prompt},
-        ]
-
-        response = get_response(messages)
-        return response
-
-    def summarize(self):
-        # loop, adding messages until doing so would put us over the character limit,
-        # summarizing at each step
-        this_block = []
-        summaries = []
-        char_limit = 4500
-
-        for m in self.messages():
-            current_len = len("\n".join(this_block))
-            this_chunk = f"{m['role']}\n{m['content']}\n"
-            if current_len + len(this_chunk) + 1 > char_limit:
-                summaries.append(self._summarize_block(this_block))
-                this_block = []
-
-            this_block.append(this_chunk)
-
-        summaries.append(self._summarize_block(this_block))
-
-        if len(summaries) > 1:
-            return self._summarize_block(summaries)
-        
-        return summaries[0]
-
-    # ------------------
-    # SAYING STUFF
-    # ------------------
-
-    def humansay(self, content):
-        self.M.append({"role": "user", "content": content})
-        db.messages.insert_one({
-            'session_id': self._id,
-            'role': 'user',
-            'content': content,
-            'dt': dt.datetime.utcnow(),
-        })
-
-    def computersay(self, content):
-        self.M.append({"role": "assistant", "content": content})
-        db.messages.insert_one({
-            'session_id': self._id,
-            'role': 'assistant',
-            'content': content,
-            'dt': dt.datetime.utcnow(),
-        })
-        print(content)
-
-    def computersay_self(self, content):
-        self.M.append({"role": "system", "content": content})
-        db.messages.insert_one({
-            'session_id': self._id,
-            'role': 'system',
-            'content': content,
-            'dt': dt.datetime.utcnow(),
-        })
 
 # we need a decorator for actions
 def action(description, example, **kwargs):
@@ -119,15 +23,6 @@ class DM:
     def __init__(self, session):
         self.session = session
         self.actions = self._gather_actions()
-
-        previous_sessions = db.sessions.find({'player_id': self.session.player_id}).sort('dt', -1).limit(2)
-        previous_sessions = list(previous_sessions)[1:]
-        if len(previous_sessions) == 0:
-            self.last_session = None
-        else:
-            self.last_session = previous_sessions[0]
-
-        self.M = []
 
     def _gather_actions(self):
         """
@@ -160,8 +55,19 @@ class DM:
         parts = []
         for action in self.actions:
             parts.append(f"{action['name']}: {action['description']}")
-            example = json.loads(action['example'])
-            example['type'] = action['name']
+
+            # in 'example', we should search for any lines which are JSON
+            # and then we should add a 'type' field to the JSON
+            elines = []
+            for l in action['example'].splitlines():
+                l = l.strip()
+                if l.startswith("{"):
+                    l = json.loads(l)
+                    l['type'] = action['name']
+                    elines.append(json.dumps(l))
+                else:
+                    elines.append(l)
+            example = "\n".join(elines)
 
             parts.append((
                 f"If you want to {action['description']}, type:"
@@ -185,7 +91,7 @@ class DM:
 
         messages = [
             {"role": "system", "content": prompt},
-            *self.M,
+            *self.session.M,
             {"role": "system", "content": "What do you think to yourself? Be brief."},
         ]
 
@@ -219,9 +125,9 @@ class DM:
         
         if hasattr(self, 'additional_prompt'):
             messages.append({'role': 'system', 'content': self.additional_prompt()})
-        
+
         messages += [
-            *self.M,
+            *self.session.M,
             {"role": "system", "content": f"What do you do? (type = {action_names_str}). Use only JSON strings, one per line. If no action need be taken from the most recent message, simply type 'pass'."},
         ]
 
@@ -239,17 +145,26 @@ class DM:
                 part = json.loads(part)
                 self.act_on(part)
             except json.decoder.JSONDecodeError:
-                print("Invalid JSON:", part)
+                logger.log(logging.DEBUG, f"Invalid JSON: {part}")
 
     def act_on(self, action):
-        print("Executing... ", json.dumps(action, indent=2))
+        logger.log(logging.DEBUG, f"Executing...\n{json.dumps(action, indent=2)}")
         act = dict(action)
+        if 'type' not in act:
+            self.session.computersay_self("No type specified. Please rewrite this one.")
+            return self.act()
+        
         typ = action.pop('type')
 
         try:
             fn = getattr(self, typ)
             response = fn(**action)
-            self.session.computersay_self(response)
+            if response is not None:
+                self.session.computersay_self(response)
+            else:
+                self.session.computersay_self("No response, action may have completed successfully.")
+                print('Warning: no response from action', typ)
+
         except Exception as e:
             # first get the last line of the traceback
             tb = traceback.format_exc().splitlines()[-1]
@@ -259,7 +174,7 @@ class DM:
 
             self.session.computersay_self(f"Error in command '{json.dumps(act, indent=2)}': {error} ({tb})")
             self.session.computersay_self("Please rewrite this one.")
-            self.act()
+            return self.act()
 
     def respond(self):
 
@@ -274,16 +189,9 @@ class DM:
         if hasattr(self, 'additional_prompt'):
             my_messages.append({'role': 'system', 'content': self.additional_prompt()})
 
-        response = get_response(my_messages + self.M, model=DEFAULT_MODEL)
+        response = get_response(my_messages + self.session.M, model=DEFAULT_MODEL)
 
         self.session.computersay(response)
-
-    def consolidate_messages(self):
-        # remember a summary of the messages
-        self.summary.append(self.summarize_plotline())
-
-        # (mostly) clear the messages
-        self.M = self.M[-2:]
 
     # ------------------
     # Running the Conversation
@@ -310,21 +218,73 @@ class EntryDM(DM):
 
     def __init__(self, session):
         from .story_alec import Quest
+        from .entity import Entity
+
         super().__init__(session)
 
+        player = Entity(self.session.player_id)
+
         # if there is only one session, it's the new one we just made
-        if self.last_session is None:
+        if self.session.previous is None:
             # ask if they want to start a new adventure
             qa = InfoGetter(self.session, {
                 "name": "Get their real name, not the in-game name.",
                 "adventure_description": "Get an idea of the kind of adventure the person would like"
             })
             qa.loop()
+            player.set('real_name', qa['name'])
+            
+            self.session.computersay("Thank you for your answers. Give me a little while to generate the adventure for you.")
             self.adventure = Quest.new_from_description(qa['adventure_description'])
+
+            # describe briefly the setting of the adventure
+            self.session.computersay(f"Welcome to {self.adventure.name}!")
+
+            # gather player information
+            from .entity import Entity
+            qa = InfoGetter(self.session, {
+                "name": "Ask for a name for the player's character (in-game name).",
+                "appearance": "The player's character's appearance. Be succinct.",
+                "languages": "Languages which the player's character speaks.",
+                "personality": "The player's character's personality. What are they like? Specific ticks?",
+                "backstory": "The player's character's backstory. What specific events have shaped their life?",
+                "goal": "A long-term life goal which is the focus of their attention.",
+                "fears": "The player's character's fears. What are they afraid of?",
+                "alignment": "The player's character's alignment. This is a moral compass, which can be one of the following: lawful good, neutral good, chaotic good, lawful neutral, neutral, chaotic neutral, lawful evil, neutral evil, chaotic evil.",
+            })
+            qa.loop()
+
+            # set these attributes on the player
+            for k,v in qa._info.items():
+                player.set(k, v)
+
+            player.query('brief_description')
+
+            self.session.computersay(f"Let's begin!")
+            self.session.set('location', self.adventure.start_location)
+            self.session.set('quest', self.adventure._id)
 
         else:
             # otherwise we should extract some stuff from the previous session
-            self.location = self.last_session.get('location', None)
+            prev = self.session.previous
+            self.session.set('location', prev.location)
+
+            if not hasattr(prev, 'summary'):
+                prev.set('summary', prev.summarize())
+            s = prev.summary
+
+            self.session.computersay_self("\nHere's a summary of the previous adventure:\n"+s)
+
+            # find any extra messages, and we'll bring them into this session
+            last_summ_dt = db.summaries.find({'player_id': self.session.player_id}).sort('end', -1).limit(1)
+            last_summ_dt = list(last_summ_dt)[0]['end']
+            uncounted_messages = db.messages.find({'player_id': self.session.player_id, 'created_at': {'$gt': last_summ_dt}})
+            self.session.M += list(uncounted_messages)
+            self.session.consolidate_messages()
+
+        # and start the freeform adventure
+        lesgo = FreeForm(self.session)
+        lesgo.loop()
 
 class InfoGetter(DM):
     def __init__(self, session, *args, **kwargs):
@@ -340,7 +300,12 @@ class InfoGetter(DM):
         super().__init__(session)
 
     def additional_prompt(self):
-        p = "The DM is here responsible for asking the player for the following bits of information, so we can move on with the game...\nPlease only ask one question at a time and be brief.\n"
+        p = (
+            "The DM is here responsible for asking the player for the following bits of information, so we can move on with the game...\n"
+            "Please only ask one question at a time and be brief.\n"
+            "Don't be afraid to ask the player to elaborate, or to ask follow-up questions.\n"
+            "Don't fill in any blanks for the player (unless they ask for it). Their answers should come from their messages.\n"
+        )
         parts = [f"{k}: {v}" for k,v in self._target.items()]
         p += indent("\n".join(parts), 2)
         return p
@@ -351,6 +316,7 @@ class InfoGetter(DM):
     )
     def set(self, key, value):
         self._info[key] = value
+        return f"Set {key} to {value} successfully."
 
     # getting like a dictionary
     def __getitem__(self, k):
@@ -377,43 +343,105 @@ class InfoGetter(DM):
 class FreeForm(DM):
     @action(
         description="add an item to the inventory",
-        example="""{ "type": "inventory", "action": "add|remove", "object": "detailed description of object" }""",
+        example="""{ "action": "add|remove", "object": "detailed description of object", "quantity": 3 }""",
     )
-    def inventory(self, action, object):
-        self.add_txt("inventory", f"{action}: {object}")
-        return f"Inventory {action}: {object}"
+    def inventory(self, action, object, quantity):
+        if action == 'add':
+            return self.session.player.add_inventory(object, quantity)
+        elif action == 'remove':
+            return self.session.player.remove_inventory(object, quantity)
     
     @action(
-        description="change the scene",
-        example="""{ "type": "change_scene", "to": "start" }""",
+        description="Change the scene. Whenever you move to a different location, you should call this function.",
+        example=(
+            """{ "mode": "existing", "to": "name of valid exit" }\n"""
+            """OR\n{ "mode": "new", "location_name": "name of new location", "location_description": "description of new location", "story_importance": "how does this location tie in to the story?" }\n"""
+        )
     )
-    def change_scene(self, to):
-        self.story_part_name = to
-        self.set_txt("story_part", self.story_part_name)
+    def change_scene(self, mode, to=None, location_name=None, location_description=None, story_importance=None):
+        
+        if mode == "existing":
+            from .location import Location
+            loc = Location(self.session.location)
+            exits = loc.exits
+            for exit in exits:
+                if exit['location_name'] == to:
+                    # we need to generate even more information about this location
+                    if 'location_id' not in exit:
+                        loc = Location.new_from_description(
+                            exit['location_description'], 
+                            exit['story_importance'], 
+                            synchronous=False,
+                            expand=False
+                        )
+                        exit['location_id'] = loc._id
+                        db.location.update_one(
+                            {'_id': self.session.location},
+                            {'$set': {'exits': exits}}
+                        )
 
-        return "Changed scene to " + to
+                    self.session.set('location', exit['location_id'])
+                    return f"Changed scene to '{to}'"
+                
+            return f"Could not find exit '{to}'"
+        
+        elif mode == "new":
+            from .location import Location
+            loc = Location.new_from_description(location_description, story_importance)
+            self.session.set('location', loc._id)
+            return f"Changed scene to a completely new place: '{location_name}'"
+        
+        else:
+            return f"Invalid mode {mode}"
     
     @action(
-        description="roll hit dice",
-        example="""{ "type": "roll_hit_dice", "n_sides": 6, "n_dice": 2, "kind": "dexterity" }""",
+        description="roll dice to determine the outcome of an action",
+        example="""{ "n_sides": 20, "n_dice": 1, "kind": "dexterity" }""",
     )
-    def roll_hit_dice(self, n_sides, n_dice, kind=None, **kwargs):
+    def roll_dice(self, n_sides, n_dice, kind=None):
         import random
         result = [ random.randint(1, n_sides) for i in range(n_dice) ]
         result = result_og = sum(result)
         mod = 0
         if kind is not None and kind in self.type_modifiers:
-            mod += self.type_modifiers[kind]
+            mod += self.session.player.type_modifiers[kind]
         result += mod
 
         return f"Rolled {n_dice}d{n_sides} (kind={kind}) {result_og} + {mod} = {result}"
     
+    def additional_prompt(self):
+        from .location import Location
+        from .entity import Entity
+
+        loc = Location(self.session.location)
+        player = Entity(self.session.player_id)
+
+        exit_str = "\n".join([f"NAME:{x['location_name']}\nDESCRIPTION:\n{x['location_description']}\nSTORY_IMPORTANCE:\n{x['story_importance']}\n" for x in loc.exits])
+
+        p = (
+            f"The player is right now in {loc.name}. Here's a description of this location:\n" +
+            indent(loc.description, 2) + 
+            "\n\nThe player has the following inventory:\n" +
+            indent(player.get_inventory(), 2) +
+            "\n\nThe places the player could go from here are as follows:\n" +
+            indent(exit_str, 2)
+        )
+        #print(p)
+        return p
+    
 
 if __name__ == "__main__":
+    setup_logging()
+    enable_logging_for_submodules(['knowledge'], level=logging.DEBUG)
+
+    if False:
+        for dbname in ['entity', 'location', 'session', 'messages', 'player', 'location', 'quest', 'subquest']:
+            db[dbname].drop()
+
     import sys
-    from .player import Player
-    player = Player.new()
+    from .entity import Entity
+    from .session import Session
+    player = Entity("6584a773b2297e5345d4c461")
+    #player = Entity.new()
     session = Session.new_with_player(player)
     dm = EntryDM(session)
-    print(dm._format_actions())
-    dm.loop()
