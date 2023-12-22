@@ -13,7 +13,7 @@ class World(Knowledge):
         "gods": "What gods are there? What are their domains?",
     }
 
-class Adventure(Knowledge):
+class SubQuest(Knowledge):
     questions = {
         "NPC_descriptions": "Briefly describe the NPCs in this adventure. This should be a simple JSON list, with each element containing a string description of an interesting character players may encounter.",
         "location_descriptions": "Briefly describe the locations in this adventure. This should be a simple JSON list, with each element containing a string description of an interesting location players may encounter.",
@@ -25,33 +25,37 @@ class Adventure(Knowledge):
     """)
 
     @classmethod
-    def new_from_description(cls, description):
+    def new_from_description(cls, description, synchronous=True):
         c = cls.new()
         c.set('description', description)
 
         for q in cls.questions:
-            c.query(q)
+            c.query(q, synchronous=True)
 
         NPC_ids = []
-        for n in c.NPC_descriptions:
-            e = Entity.new_from_description(n)
-            NPC_ids.append(e._id)
-        c.set('NPC_ids', NPC_ids)
+        if type(c.NPC_descriptions) == list:
+            for n in c.NPC_descriptions:
+                e = Entity.new_from_description(n, synchronous=synchronous)
+                NPC_ids.append(e._id)
+            c.set('NPC_ids', NPC_ids)
         
         location_ids = []
-        for l in c.location_descriptions:
-            e = Location.new_from_description(l)
-            location_ids.append(e._id)
-        c.set('location_ids', location_ids)
+        if type(c.location_descriptions) == list:
+            for l in c.location_descriptions:
+                e = Location.new_from_description(l, synchronous=synchronous, expand=False)
+                location_ids.append(e._id)
+            c.set('location_ids', location_ids)
 
         return c
 
 class Quest(Knowledge):
     questions = {
-        "big_bad": "Adventurers needs a threat worthy of the heroes' attention. The threat might be a single villain or monster, a villain with lackeys, an assortment of monsters, or an evil organization. Whatever their nature, the antagonists should have goals that the heroes can uncover and thwart. Who is the big bad of this story? What are their goals?",
+        "big_bad": "Adventurers needs a threat worthy of the heroes' attention. The threat might be a single villain or monster, a villain with lackeys, an assortment of monsters, or an evil organization. Whatever their nature, the antagonists should have goals that the heroes can uncover and thwart. Who is the big bad of this story? Simply describe their personality, appearance, and goals. Do not describe the quest yet.",
         "adventure1": "What is the first adventure in this story? What is the hook? What is the goal?",	
         "adventure2": "What is the second adventure in this story? Perhaps they learn more about the big bad?",
         "adventure3": "What is the third adventure in this story? This is the climax of the story.",
+        "start_description": "Briefly describe an interesting starting location for the adventure.",
+        "name": "Give a short name for this quest.",
     }
     
     attribute_prompt = flatten_whitespace(f"""
@@ -107,13 +111,31 @@ class Quest(Knowledge):
             c.set('player_level', player_level)
             c.set('level_advice', c.get_level_description(player_level))
 
-        for q in cls.questions:
-            c.query(q)
+        # generate textual descriptions
+        c.query('adventure1', synchronous=True)
+        c.query('name', synchronous=True)
+        c.query('big_bad', synchronous=True)
+        c.query('start_description', synchronous=True)
 
-        for i in range(3):
-            desc = getattr(c, f"adventure{i+1}")
-            a = Adventure.new_from_description(desc)
-            c.set(f"adventure{i+1}", a._id)
+        # and make the character, although we don't need them now...
+        c.set('big_bad', Entity.new_from_description(c.big_bad, synchronous=False)._id)
+
+        a1 = SubQuest.new_from_description(c.adventure1, synchronous=True)
+        c.set('adventure1', a1._id)
+
+        start = Location.new_from_description(
+            c.start_description, 
+            "The starting location of the adventure", 
+            synchronous=True,
+            expand=False
+        )._id
+
+        c.set('start_location', start)
+        a1.set('start_location', start)
+
+        # generate the other adventures asynchronously
+        for i in range(2,4):
+            c.query(f'adventure{i}', synchronous=False)        
 
         return c
     
