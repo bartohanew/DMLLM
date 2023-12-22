@@ -11,6 +11,11 @@ class Entity(Knowledge):
         "goal": "What are the character's goal right now? Give one long-term life goal which is the focus of their attention.",
         "fears": "What are the character's fears? What are they afraid of?",
         "brief_description": "Give a brief description of the character. This should be a single sentence, summarizing the character.",
+        "alignment": "What is the character's alignment?",
+        "roll_modifiers": (
+            "What are the character's roll modifiers? This should be a JSON object, with keys being the roll type, and values being the modifier.\n"
+            "Please always include the following keys: strength, dexterity, constitution, intelligence, wisdom, charisma."
+        ),
     }
 
     attribute_prompt = flatten_whitespace(f"""
@@ -22,8 +27,12 @@ class Entity(Knowledge):
         Try to be brief, but not too brief. Concise.
     """)
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self._data['inventory'] = self._data.get('inventory', {})
+
     @classmethod
-    def new_from_description(cls, description, alignment=None):
+    def new_from_description(cls, description, alignment=None, synchronous=True):
 
         knowledge_type = cls.__name__.lower()
         cid = db[knowledge_type].insert_one({}).inserted_id
@@ -36,36 +45,43 @@ class Entity(Knowledge):
         c.set('alignment', alignment)
 
         for q in cls.questions:
-            c.query(q)
+            c.query(q, synchronous=synchronous)
 
         return c
+    
+    def _update_inventory(self):
+        db.entity.update_one({'_id': self._id}, {'$set': {'inventory': self._data['inventory']}})
 
     def add_inventory(self, item, quantity=1):
-        self._data['inventory'].append(item)
-        db.characters.update_one({'_id': self._id}, {'$set': {'inventory': self._data['inventory']}})
+        if item in self._data['inventory']:
+            self._data['inventory'][item] += quantity
+        else:
+            self._data['inventory'][item] = quantity
 
-    def remove_inventory(self, item):
-        self._data['inventory'].remove(item)
-        db.characters.update_one({'_id': self._id}, {'$set': {'inventory': self._data['inventory']}})
+        self._update_inventory()
+        return f"The player now has {self._data['inventory'][item]}X '{item}'."
 
+    def remove_inventory(self, item, quantity=1):
+        if item in self._data['inventory']:
+            self._data['inventory'][item] -= quantity
+            if self._data['inventory'][item] <= 0:
+                del self._data['inventory'][item]
+            
+            self._update_inventory()
+            return f"The player now has {self._data['inventory'][item]}X '{item}'."
+        else:
+            return f"The player does not have {item}."
+        
     def get_inventory(self):
-        inventory = self.get_txt("inventory")
-        if inventory is None:
-            if self.story_part_name == 'start':
-                self.add_inventory("10 gold pieces")
-                self.add_inventory("a backpack")
-                self.add_inventory("a bedroll")
-                self.add_inventory("a mess kit")
-                self.add_inventory("a tinderbox")
-                self.add_inventory("10 torches")
-                self.add_inventory("10 days of rations")
-                self.add_inventory("a waterskin")
-                self.add_inventory("50 feet of hempen rope")
-                return self.get_inventory()
-            else:
-                inventory = "The player has nothing."
-
-        return inventory
+        inventory = self._data['inventory']
+        if not len(inventory):
+            return "The player has nothing."
+        
+        inventory_str = []
+        for k,v in inventory.items():
+            inventory_str.append(f"{v}x {k}")
+        inventory_str = "\n".join(inventory_str)
+        return inventory_str
 
 if __name__ == "__main__":
     import sys
